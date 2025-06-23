@@ -34,13 +34,13 @@ repository              : "dreaming-huang/dreaming-huang.github.io" # Correct: T
 author:
   # Biographic information
   avatar           : "face.png"
-  name             : "Your Sidebar Name"
-  pronouns         : # example: "she/her"  
+  name             : "junming huang"
+  pronouns         : "jreaming Wong"  
   bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  location         : "HangZhou"
+  employer         : "Zhejiang University"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "junminghuang@zju.edu.cn" 
 
   # Academic websites
   academia         : # URL
