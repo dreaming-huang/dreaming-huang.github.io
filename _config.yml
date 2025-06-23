@@ -6,16 +6,27 @@
 # `jekyll serve -l -H localhost`. If you change this file, please restart the 
 # server process.
 
+# # Basic Site Settings
+# locale                   : "en-US"
+# site_theme               : "default"
+# title                    : "Your Name / Site Title"
+# title_separator          : "-"
+# name                     : &name "Your Name"
+# description              : &description "personal description"
+# url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+# baseurl                  : "" # the subpath of your site, e.g. "/blog"
+# repository               : "academicpages/academicpages.github.io"
+
 # Basic Site Settings
-locale                   : "en-US"
-site_theme               : "default"
-title                    : "Your Name / Site Title"
-title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+locale                  : "en-US"
+site_theme              : "default"
+title                   : "Junming Huang"
+title_separator         : "-"
+name                    : &name "Junming Huang"
+description             : &description "Personal academic website of Junming Huang, a Master's student at Zhejiang University specializing in Computer Graphics and AI."
+url                     : "https://dreaming-huang.github.io" # Correct: Your site's main URL.
+baseurl                 : "" # Correct: Should be empty for a user page like username.github.io
+repository              : "dreaming-huang/dreaming-huang.github.io" # Correct: The repository for your site
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
