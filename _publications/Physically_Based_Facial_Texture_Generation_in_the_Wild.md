@@ -9,4 +9,4 @@ date: 2025-06-18
 venue: 'IEEE Transactions on Pattern Analysis and Machine Intelligence'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/11039616/metrics#metrics'
 ---
-Chi Wang*, Junming Huang*, Rong Zhang*, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu†
+Chi Wang, Junming Huang, Rong Zhang, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu
