@@ -27,22 +27,8 @@ MS  in Software Engineering, Zhejiang University ,*2023-2026*
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<!-- Render publications in alphabetical order by title -->
+{% assign sorted_publications = site.publications | sort: 'title' %}
+{% for post in sorted_publications %}
+  {% include archive-single.html %}
+{% endfor %}
