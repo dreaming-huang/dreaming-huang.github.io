@@ -21,10 +21,6 @@ MS  in Software Engineering, Zhejiang University ,*2023-2026*
     * Led the research and development of a text-driven facial material generation method.
 
 ## Publications
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
 <!-- Render publications in alphabetical order by title -->
