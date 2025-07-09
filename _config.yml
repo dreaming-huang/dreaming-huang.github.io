@@ -20,7 +20,7 @@
 # Basic Site Settings
 locale                  : "en-US"
 site_theme              : "default"
-title                   : "Junming Huang"
+title                   : "Junming Huang(dreaming,黄俊铭)"
 title_separator         : "-"
 name                    : &name "Junming Huang"
 description             : &description "Personal academic website of Junming Huang, a Master's student at Zhejiang University specializing in Computer Graphics and AI."
