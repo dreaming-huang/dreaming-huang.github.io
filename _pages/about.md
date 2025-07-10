@@ -1,7 +1,7 @@
 ---
 permalink: /
 author_profile: true
-show_title: false
+title: "Junming Huang(dreaming，黄俊铭)" 
 redirect_from: 
   - /about/
   - /about.html
