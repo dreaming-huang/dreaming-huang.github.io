@@ -9,5 +9,6 @@ date: 2025-06-18
 venue: 'IEEE Transactions on Pattern Analysis and Machine Intelligence'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/11039616/metrics#metrics'
 ---
+![67adef1f8c459159a2f4ca9903a6721](https://github.com/user-attachments/assets/534c523b-2276-420e-ba7c-0f06f82f7dfb)
 Chi Wang\*, Junming Huang\*, Rong Zhang\*, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu <br>
 *Chi Wang, Junming Huang and Rong Zhang are co-fitst authors.
