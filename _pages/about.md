@@ -9,7 +9,7 @@ I am a Master's student in Software Engineering at the [State Key Lab of CAD&CG]
 
 ## Education
 BSc in Software Engineering,  Yunnan University  ,*2019-2023* <br>
-MS  in Software Engineering, Zhejiang University ,*2023-2026*
+MS  in Software Engineering, Zhejiang University ,*2023-2026(expected)*
 
 ## Industry Experience
 * **Research Intern (Computer Graphics, Building Generation)** @ [Tencent](https://www.tencent.com/en-us/index.html)<br>
