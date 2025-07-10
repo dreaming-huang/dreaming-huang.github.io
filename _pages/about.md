@@ -13,14 +13,14 @@ MS  in Software Engineering, Zhejiang University ,*2023-2026*
 
 ## Industry Experience
 * **Research Intern (Computer Graphics, Building Generation)** @ [Tencent](https://www.tencent.com/en-us/index.html)<br>
-    *Apr 2024 - Present *
+    *Apr 2024 - Present*<br>
     *Responsibilities include:*
     * Developed a diffusion model-guided method for structured building generation using procedural content generation (PCG).
     * A paper accepted by SIGGRAPH 2025.
       
 
 * **Research Intern (Computer Graphics, Digital Human Generation)** @ [Kuaishou](https://ir.kuaishou.com/)<br>
-    *Apr 2023 - Apr 2024*
+    *Apr 2023 - Apr 2024*<br>
     *Responsibilities include:*
     * Led the research and development of a text-driven facial material generation method.
     * A paper accepted by TPAMI and a patent and one national invention patent.
