@@ -23,7 +23,7 @@ MS  in Software Engineering, Zhejiang University ,*2023-2026*
     **Apr 2023 - Apr 2024**<br>
     *Responsibilities include:*
     * Led the research and development of a text-driven facial material generation method.
-    * A paper accepted by TPAMI and a patent and one national invention patent.
+    * A paper accepted by TPAMI and one national invention patent.
 
 ## Publications
 {% include base_path %}
