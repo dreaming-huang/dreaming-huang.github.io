@@ -13,12 +13,14 @@ MS  in Software Engineering, Zhejiang University ,*2023-2026*
 
 ## Industry Experience
 * **Research Intern (Computer Graphics, Building Generation)** @ [Tencent](https://www.tencent.com/en-us/index.html)<br>
-    *Apr 2024 - Present Collaborated with and received guidance from Dr. Qiang Dai*
+    *Apr 2024 - Present *
+    *Collaborated with and received guidance from Dr. Qiang Dai*
     * Developed a diffusion model-guided method for structured building generation using procedural content generation (PCG).
       
 
 * **Research Intern (Computer Graphics, Digital Human Generation)** @ [Kuaishou](https://ir.kuaishou.com/)<br>
     *Apr 2023 - Apr 2024*
+    *Collaborated with and received guidance from Dr. Chongyang Ma and Dr. [Pengfei Wan](https://scholar.google.com/citations?user=P6MraaYAAAAJ&hl=en)*
     * Led the research and development of a text-driven facial material generation method.
 
 ## Publications
