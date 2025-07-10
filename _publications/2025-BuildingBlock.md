@@ -12,4 +12,4 @@ paperurl: 'https://arxiv.org/pdf/2505.04051'
 ---
 ![a984da1f2b59f76267f3bf10697e6c8](https://github.com/user-attachments/assets/bcd06d03-ea25-4c47-b548-2f2134c24bb2)
 
-Junming Huang, Chi Wang, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu
+**Junming Huang**, Chi Wang, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu
