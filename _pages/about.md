@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 ## About Me
-I am a Master's student in Software Engineering at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/#), Zhejiang University, fortunate to be supervised by Prof. [Weiwei Xu](http://www.cad.zju.edu.cn/home/weiweixu/). My primary research interests lie in **Generative Models (AIGC)**, **Computer Graphics**, and **Computer Vision**.
+I am a Master's student in Software Engineering at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/#), Zhejiang University, fortunate to be supervised by Prof. [Weiwei Xu](http://www.cad.zju.edu.cn/home/weiweixu/). My primary research interests lie in **Generative Models(including LLMs and Diffusion Models)** and **Computer Graphics**.
 
 ## Education
 BSc in Software Engineering,  Yunnan University  ,*2019-2023* <br>
