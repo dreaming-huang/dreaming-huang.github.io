@@ -60,10 +60,22 @@
       {% endif %}
 
       {% capture links -%}
-      {%- if post.paperurl -%}<a href="{{ post.paperurl }}" style="margin: 0 0 0 0">Paper</a>{%- endif -%}
-      {%- if post.slidesurl -%}{%- if post.paperurl -%} | {%- endif -%}<a href="{{ post.slidesurl }}" style="margin: 0 0 0 0">Slides</a>{%- endif -%}
-      {%- if post.bibtexurl -%}{%- if post.paperurl or post.slidesurl -%} | {%- endif -%}<a href="{{ post.bibtexurl }}" style="margin: 0 0 0 0">Bibtex</a>{%- endif -%}
-      {%- endcapture %}
+      <p class="archive__item-links" style="margin-top: 0; margin-bottom: 0; line-height: 1.2;">
+        {%- if post.paperurl -%}
+          <a href="{{ post.paperurl }}" style="margin: 0;">Paper</a>
+        {%- endif -%}
+        
+        {%- if post.slidesurl -%}
+          {%- if post.paperurl -%} | {%- endif -%}
+          <a href="{{ post.slidesurl }}" style="margin: 0;">Slides</a>
+        {%- endif -%}
+        
+        {%- if post.bibtexurl -%}
+          {%- if post.paperurl or post.slidesurl -%} | {%- endif -%}
+          <a href="{{ post.bibtexurl }}" style="margin: 0;">Bibtex</a>
+        {%- endif -%}
+      </p>
+    {%- endcapture %}
 
       {% if post.citation %}
         <p>Recommended citation: {{ post.citation }}<br />{{ links }}</p>
