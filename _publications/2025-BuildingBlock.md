@@ -3,7 +3,6 @@ title: "BuildingBlock: A Hybrid Approach for Structured Building Generation"
 collection: publications
 category: conferences
 permalink: /publication/BuildingBlock
-excerpt: 'AIGC, Computer Graphics, Game'
 date: 2025-05-06
 venue: 'ACM SIGGRAPH 2025'
 paperurl: 'https://arxiv.org/pdf/2505.04051'

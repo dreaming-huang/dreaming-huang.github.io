@@ -3,7 +3,6 @@ title: "Physically Based Facial Texture Generation in the Wild"
 collection: publications
 category: manuscripts
 permalink: /publication/2025-06-18-Physically_Based_Facial_Texture_Generation_in_the_Wild
-excerpt: 'AIGC, Computer Graphics, PBR'
 date: 2025-06-18
 venue: 'IEEE Transactions on Pattern Analysis and Machine Intelligence'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/11039616/metrics#metrics'
