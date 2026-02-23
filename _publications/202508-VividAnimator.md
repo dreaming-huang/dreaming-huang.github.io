@@ -3,7 +3,7 @@ title: "VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Anima
 collection: publications
 category: conferences
 permalink: /publication/VividAnimator
-date: 2025-08
+date: 2025-08-01
 venue: 'WACV 2026 Oral'
 paperurl: 'https://arxiv.org/pdf/2510.10269'
 teaser: VividAnimator.png
