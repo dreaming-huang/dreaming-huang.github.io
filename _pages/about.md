@@ -18,7 +18,7 @@ I am a Ph.D. student at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/
 
 {% assign sorted_publications = site.publications | sort: 'title' %}
 {% for post in sorted_publications %}
-{% include archive-single.html type="grid" %}
+{% include archive-single.html%}
 {% endfor %}
 
 ## Industry Experience
