@@ -27,7 +27,7 @@
     {% endif %}
 
     <div class="archive__item-content" style="flex: 1;">
-      <h2 class="archive__item-title" itemprop="headline" style="margin-top: 0;">
+      <h2 class="archive__item-title" itemprop="headline" style="margin: 0 0 0 0">
         {% if post.link %}
           <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
         {% else %}
@@ -49,15 +49,15 @@
 
 
       {% if post.author %}
-      <p class="archive__item-authors" style="margin: 0 0 0.4em 0; font-size: 0.95em; color: #333;">
-        {% if post.author.size > 0 and post.author[0] %}
-          {% capture author_list %}{{ post.author | join: ", " }}{% endcapture %}
-          {{ author_list | replace: "Junming Huang", "<strong>Junming Huang</strong>" }}
-        {% else %}
-          {{ post.author | replace: "Junming Huang", "<strong>Junming Huang</strong>" }}
-        {% endif %}
-      </p>
-    {% endif %}
+        <p class="archive__item-authors" style="margin: 0 0 0 0; font-size: 0.95em; color: #333;">
+          {% if post.author.size > 0 and post.author[0] %}
+            {% capture author_list %}{{ post.author | join: ", " }}{% endcapture %}
+            {{ author_list | replace: "Junming Huang", "<strong>Junming Huang</strong>" }}
+          {% else %}
+            {{ post.author | replace: "Junming Huang", "<strong>Junming Huang</strong>" }}
+          {% endif %}
+        </p>
+      {% endif %}
 
       {% if post.citation %}
         <p>Recommended citation: {{ post.citation }}<br />{{ links }}</p>
