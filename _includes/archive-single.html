@@ -66,12 +66,6 @@
       {%- endcapture %}
     
       <p style="margin: 0 0 0 0">{{ links }}</p>
-
-      {% if post.citation %}
-        <p>Recommended citation: {{ post.citation }}<br />{{ links }}</p>
-      {% elsif links != "" %}
-        <p>{{ links }}</p>
-      {% endif %}
     </div>
 
   </article>
