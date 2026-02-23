@@ -39,20 +39,6 @@
         <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
       {% endif %}
 
-      {% if post.collection == 'teaching' %}
-        <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-      {% elsif post.collection == 'publications' %}
-        <p> <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-      {% elsif post.date %}
-        <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-      {% endif %}
-      
-      {% capture links %}
-        {% if post.paperurl %}<a href="{{ post.paperurl }}">Download Paper</a>{% endif %}
-        {% if post.slidesurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.slidesurl }}">Download Slides</a>{% endif %}
-        {% if post.bibtexurl %}{% if post.paperurl or post.slidesurl %} | {% endif %}<a href="{{ post.bibtexurl }}">Download Bibtex</a>{% endif %}
-      {% endcapture %}
-
       {% if post.citation %}
         <p>Recommended citation: {{ post.citation }}<br />{{ links }}</p>
       {% elsif links != "" %}
