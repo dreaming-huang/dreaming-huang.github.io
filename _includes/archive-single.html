@@ -42,7 +42,6 @@
 
       {% if post.author %}
       <p class="archive__item-authors" style="margin: 0 0 0.4em 0; font-size: 0.95em; color: #333;">
-        <i class="fa fa-fw fa-user" aria-hidden="true"></i>
         {% if post.author.size > 0 and post.author[0] %}
           {% capture author_list %}{{ post.author | join: ", " }}{% endcapture %}
           {{ author_list | replace: "Junming Huang", "<strong>Junming Huang</strong>" }}
