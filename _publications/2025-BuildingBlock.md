@@ -7,7 +7,7 @@ excerpt: 'AIGC, Computer Graphics, Game'
 date: 2025-05-06
 venue: 'ACM SIGGRAPH 2025'
 paperurl: 'https://arxiv.org/pdf/2505.04051'
-images: /images/buildingblock_teaser.png
+teaser: /images/buildingblock_teaser.png
 ---
 # ![a984da1f2b59f76267f3bf10697e6c8](https://github.com/user-attachments/assets/bcd06d03-ea25-4c47-b548-2f2134c24bb2)<br>
 
