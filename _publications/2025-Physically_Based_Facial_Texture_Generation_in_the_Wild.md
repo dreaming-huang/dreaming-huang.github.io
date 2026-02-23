@@ -6,6 +6,7 @@ permalink: /publication/2025-06-18-Physically_Based_Facial_Texture_Generation_in
 venue: 'IEEE Transactions on Pattern Analysis and Machine Intelligence 2025'
 paperurl: 'https://ieeexplore.ieee.org/abstract/document/11039616/metrics#metrics'
 teaser: pbr_gan_teaser.png
+author: [Chi Wang*, Junming Huang*, Rong Zhang*, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu]
 ---
 <br>
 Chi Wang\*, **Junming Huang**\*, Rong Zhang\*, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu <br>

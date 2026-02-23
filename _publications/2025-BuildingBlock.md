@@ -6,6 +6,7 @@ permalink: /publication/BuildingBlock
 venue: 'ACM SIGGRAPH 2025'
 paperurl: 'https://arxiv.org/pdf/2505.04051'
 teaser: buildingblock_teaser.png
+author: [Junming Huang*, Chi Wang*, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu]
 ---
 <br>
 **Junming Huang**\*, Chi Wang\*, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu
