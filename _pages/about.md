@@ -11,12 +11,6 @@ I am a Ph.D. student at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/
 
 ## Publications
 
-{% include base_path %}
-
-<!-- Render publications in alphabetical order by title -->
-
-{% assign sorted\_publications = site.publications | sort: 'date' | reverse %} {% for post in sorted\_publications %}   {% include archive-single.html %} {% endfor %}
-
 ## Industry Experience
 
 * **Research Intern (Computer Graphics, 3D Generation)** @ [Tencent](https://www.tencent.com/en-us/index.html)<br>
