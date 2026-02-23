@@ -58,11 +58,13 @@
           {% endif %}
         </p>
       {% endif %}
-      {% capture links %}
-        {% if post.paperurl %}<a href="{{ post.paperurl }}">Paper</a>{% endif %}
-        {% if post.slidesurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}
-        {% if post.bibtexurl %}{% if post.paperurl or post.slidesurl %} | {% endif %}<a href="{{ post.bibtexurl }}">Bibtex</a>{% endif %}
-      {% endcapture %}
+
+      {% capture links -%}
+      {%- if post.paperurl -%}<a href="{{ post.paperurl }}">Paper</a>{%- endif -%}
+      {%- if post.slidesurl -%}{%- if post.paperurl -%} | {%- endif -%}<a href="{{ post.slidesurl }}">Slides</a>{%- endif -%}
+      {%- if post.bibtexurl -%}{%- if post.paperurl or post.slidesurl -%} | {%- endif -%}<a href="{{ post.bibtexurl }}">Bibtex</a>{%- endif -%}
+      {%- endcapture %}
+
       {% if post.citation %}
         <p>Recommended citation: {{ post.citation }}<br />{{ links }}</p>
       {% elsif links != "" %}
