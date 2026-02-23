@@ -1,6 +1,6 @@
 ---
 permalink: /
-layout: wide
+layout: archive
 author_profile: true
 title: "Junming Huang - 黄俊铭" 
 redirect_from: 
