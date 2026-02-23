@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/BuildingBlock
 date: 2025-05-06
-venue: 'ACM SIGGRAPH 2025'
+venue: 'ACM SIGGRAPH'
 paperurl: 'https://arxiv.org/pdf/2505.04051'
 teaser: buildingblock_teaser.png
 ---
