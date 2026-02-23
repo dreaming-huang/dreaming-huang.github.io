@@ -42,11 +42,11 @@
       {% if post.collection == 'teaching' %}
         <p> {{ post.type }}, <i>{{ post.venue }}</i> </p>
       {% elsif post.collection == 'publications' %}
-        <p>Published in <i>{{ post.venue }}</i></p>
+        <p><i>{{ post.venue }}</i></p>
       {% elsif post.venue %}
         <p><i>{{ post.venue }}</i></p>
       {% endif %}
-      
+
 
       {% if post.author %}
       <p class="archive__item-authors" style="margin: 0 0 0.4em 0; font-size: 0.95em; color: #333;">
