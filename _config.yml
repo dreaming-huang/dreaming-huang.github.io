@@ -35,7 +35,7 @@ repository              : "dreaming-huang/dreaming-huang.github.io" # Correct: T
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "xixishidi.png"
+  avatar           : "face.png"
   name             : "Junming Huang"
   pronouns         : ""  
   bio              : "A cool boy(fake)"
