@@ -21,6 +21,10 @@ I am a Ph.D. student at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/
 {% include archive-single.html%}
 {% endfor %}
 
+## News
+
+* **May 2026:** 🎉 *CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models* was accepted to **ICML 2026**.
+
 ## Industry Experience
 
 * **Research Intern (Computer Graphics, 3D Generation)** @ [Tencent](https://www.tencent.com/en-us/index.html)<br>
