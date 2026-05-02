@@ -35,6 +35,7 @@ I am a Ph.D. student at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/
 
   * Developed a diffusion model-guided method for structured building generation using procedural content generation (PCG).
   * A paper accepted by SIGGRAPH 2025.
+  * A paper accepted by ICML 2026.
   * Developed a Unified MLLM for 3D understanding and generation.
 * **Research Intern (Computer Graphics, Digital Human Generation)** @ [Kuaishou](https://ir.kuaishou.com/)<br>
   **Apr 2023 - Apr 2024**<br>
