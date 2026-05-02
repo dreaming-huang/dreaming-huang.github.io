@@ -63,6 +63,7 @@
       {%- if post.paperurl -%}<a href="{{ post.paperurl }}">Paper</a>{%- endif -%}
       {%- if post.slidesurl -%}{%- if post.paperurl -%} | {%- endif -%}<a href="{{ post.slidesurl }}">Slides</a>{%- endif -%}
       {%- if post.bibtexurl -%}{%- if post.paperurl or post.slidesurl -%} | {%- endif -%}<a href="{{ post.bibtexurl }}">Bibtex</a>{%- endif -%}
+      {%- if post.codeurl -%}{%- if post.paperurl or post.slidesurl or post.bibtexurl -%} | {%- endif -%}<a href="{{ post.codeurl }}">Code</a>{%- endif -%}
       {%- endcapture %}
     
       <p style="margin-top: 0;">{{ links }}</p>
