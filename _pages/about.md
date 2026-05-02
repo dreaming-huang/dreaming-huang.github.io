@@ -10,6 +10,13 @@ redirect_from:
 I am a Ph.D. student at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/#), Zhejiang University, under the supervision of Prof. [Weiwei Xu](http://www.cad.zju.edu.cn/home/weiweixu/). Prior to this, I received my B.E. degree from the School of Software at Yunnan University. My primary research interests lie in **Generative Models(including MLLMs and Diffusion Models)** and **Computer Graphics**.<br>
 **Email:** junminghuang [AT] zju.edu.cn
 
+## News
+
+* **May 2026:** 🎉 *CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models* was accepted to **ICML 2026**.
+* **Nov 2025:** 🎉 *VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework* was accepted as an **Oral** paper at **WACV 2026**.
+* **May 2025:** 🎉 *Physically Based Facial Texture Generation in the Wild* was accepted to **IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2025**.
+* **Apr 2025:** 🎉 *BuildingBlock: A Hybrid Approach for Structured Building Generation* was accepted to **ACM SIGGRAPH 2025**.
+
 ## Publications
 
 {% include base_path %}
@@ -20,10 +27,6 @@ I am a Ph.D. student at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/
 {% for post in sorted_publications reversed %}
 {% include archive-single.html%}
 {% endfor %}
-
-## News
-
-* **May 2026:** 🎉 *CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models* was accepted to **ICML 2026**.
 
 ## Industry Experience
 
