@@ -73,6 +73,14 @@ layout: default
           <p style="font-size: smaller"><a href="{{ page.bibtexurl }}">Download Bibtex</a></p>
         {% endif %}
 
+        {% capture project_and_code_links -%}
+          {%- if page.projecturl -%}<a href="{{ page.projecturl }}">Project Page</a>{%- endif -%}
+          {%- if page.codeurl -%}{%- if page.projecturl -%} | {%- endif -%}<a href="{{ page.codeurl }}">Code</a>{%- endif -%}
+        {%- endcapture %}
+        {% if project_and_code_links != "" %}
+          <p style="font-size: smaller">{{ project_and_code_links }}</p>
+        {% endif %}
+
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
