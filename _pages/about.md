@@ -13,9 +13,9 @@ I am a Ph.D. student at the [State Key Lab of CAD&CG](http://www.cad.zju.edu.cn/
 ## News
 
 * **May 2026:** 🎉 *CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models* was accepted to **ICML 2026**.
-* **Nov 2025:** 🎉 *VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework* was accepted as an **Oral** paper at **WACV 2026**.
+* **Nov 2025:** 🎉 *VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework* was accepted as an **Oral** paper at **WACV 2026**. The oral presentation is available on [YouTube](https://www.youtube.com/watch?v=HSvUCdF0dqE).
 * **May 2025:** 🎉 *Physically Based Facial Texture Generation in the Wild* was accepted to **IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2025**.
-* **Apr 2025:** 🎉 *BuildingBlock: A Hybrid Approach for Structured Building Generation* was accepted to **ACM SIGGRAPH 2025**.
+* **Apr 2025:** 🎉 *BuildingBlock: A Hybrid Approach for Structured Building Generation* was accepted to **ACM SIGGRAPH 2025**. The oral presentation is available on [YouTube](https://www.youtube.com/watch?v=iqTd2-4jPDs).
 
 ## Publications
 
