@@ -6,7 +6,7 @@ permalink: /publication/VividAnimator
 date: 2025-08-01
 venue: 'WACV 2026 Oral'
 paperurl: 'https://arxiv.org/pdf/2510.10269'
-oralpresentationurl: 'https://www.youtube.com/watch?v=iqTd2-4jPDs'
+oralpresentationurl: 'https://www.youtube.com/watch?v=HSvUCdF0dqE'
 teaser: VividAnimator.png
 author: [Donglin Huang*, Yongyuan Li*, Tianhang Liu*, Junming Huang, Xiaoda Yang, Chi Wang, Weiwei Xu]
 ---
