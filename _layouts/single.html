@@ -74,8 +74,9 @@ layout: default
         {% endif %}
 
         {% capture project_and_code_links -%}
-          {%- if page.projecturl -%}<a href="{{ page.projecturl }}">Project Page</a>{%- endif -%}
-          {%- if page.codeurl -%}{%- if page.projecturl -%} | {%- endif -%}<a href="{{ page.codeurl }}">Code</a>{%- endif -%}
+          {%- if page.oralpresentationurl -%}<a href="{{ page.oralpresentationurl }}">Oral Presentation</a>{%- endif -%}
+          {%- if page.projecturl -%}{%- if page.oralpresentationurl -%} | {%- endif -%}<a href="{{ page.projecturl }}">Project Page</a>{%- endif -%}
+          {%- if page.codeurl -%}{%- if page.oralpresentationurl or page.projecturl -%} | {%- endif -%}<a href="{{ page.codeurl }}">Code</a>{%- endif -%}
         {%- endcapture %}
         {% if project_and_code_links != "" %}
           <p style="font-size: smaller">{{ project_and_code_links }}</p>
