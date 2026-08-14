@@ -225,32 +225,6 @@
       }
     }
 
-    #lang-toggle {
-      a {
-        min-width: 2.4em;
-        margin: 0 0.75rem;
-        padding: 0.2rem 0.75rem;
-        text-align: center;
-        font-weight: 600;
-        font-size: 0.85em;
-        letter-spacing: 0.02em;
-        cursor: pointer;
-        white-space: nowrap;
-        border: 1px solid var(--global-border-color);
-        border-radius: 999px;
-        line-height: 1.4;
-
-        &:before {
-          display: none;
-        }
-
-        &:hover {
-          color: var(--global-masthead-link-color);
-          background: var(--global-border-color);
-        }
-      }
-    }
-
     #theme-toggle {
       a {
         width: 25px;

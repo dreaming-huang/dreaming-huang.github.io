@@ -13,19 +13,7 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  (function () {
-    try {
-      var lang = localStorage.getItem('site-lang');
-      if (lang !== 'zh') lang = 'en';
-      document.documentElement.setAttribute('data-lang', lang);
-      document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
-    } catch (e) {}
-  })();
 </script>
-<style>
-  html[data-lang="zh"] .lang-en { display: none !important; }
-  html:not([data-lang="zh"]) .lang-zh { display: none !important; }
-</style>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">

@@ -37,14 +37,10 @@ author:
   # Biographic information
   avatar           : "xixishidi.jpg"
   name             : "Junming Huang"
-  name_zh          : "黄俊铭"
   pronouns         : ""  
   bio              : "A cool boy(fake)"
-  bio_zh           : "一个酷男孩（假的）"
   location         : "HangZhou"
-  location_zh      : "杭州"
   employer         : "Zhejiang University"
-  employer_zh      : "浙江大学"
   uri              : # URL
   email            : "junminghuang@zju.edu.cn" 
 
@@ -97,13 +93,10 @@ author:
 publication_category:
   books:
     title: 'Books'
-    title_zh: '著作'
   manuscripts:
-    title: 'Journal Articles'
-    title_zh: '期刊论文'
+    title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
-    title_zh: '会议论文'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"

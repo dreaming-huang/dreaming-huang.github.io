@@ -9,7 +9,6 @@
 
 main:
   - title: "Publications"
-    title_zh: "论文发表"
     url: /publications/
 
   # - title: "Talks"
