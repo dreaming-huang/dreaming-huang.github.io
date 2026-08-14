@@ -1,12 +1,16 @@
 ---
 layout: archive
 title: "Publications"
+title_zh: "论文发表"
 permalink: /publications/
 author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+  <div class="wordwrap">
+    <span class="lang-en">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</span>
+    <span class="lang-zh">你也可以在<a href="{{site.author.googlescholar}}">我的 Google Scholar 主页</a>上找到这些论文。</span>
+  </div>
 {% endif %}
 
 {% include base_path %}
@@ -20,7 +24,15 @@ author_profile: true
         {% continue %}
       {% endif %}
       {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
+        <h2>
+          {% assign cat_title = category[1].title %}
+          {% assign cat_title_zh = category[1].title_zh %}
+          {% if cat_title_zh %}
+            {% include i18n.html en=cat_title zh=cat_title_zh %}
+          {% else %}
+            {{ cat_title }}
+          {% endif %}
+        </h2><hr />
         {% assign title_shown = true %}
       {% endunless %}
       {% include archive-single.html %}
@@ -31,6 +43,3 @@ author_profile: true
     {% include archive-single.html %}
   {% endfor %}
 {% endif %}
-
-
-

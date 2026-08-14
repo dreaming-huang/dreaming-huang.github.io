@@ -7,6 +7,14 @@ html {
   min-height: 100%;
 }
 
+html[data-lang="zh"] .lang-en {
+  display: none !important;
+}
+
+html:not([data-lang="zh"]) .lang-zh {
+  display: none !important;
+}
+
 body {
   /* Set via _themes.scss */
   color: var(--global-text-color);
