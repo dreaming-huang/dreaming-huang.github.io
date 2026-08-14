@@ -61,11 +61,11 @@
 
       {% capture links -%}
       {%- if post.paperurl -%}<a href="{{ post.paperurl }}">{% include i18n.html en="Paper" zh="论文" %}</a>{%- endif -%}
-      {%- if post.slidesurl -%}{%- if post.paperurl -%} | {%- endif -%}<a href="{{ post.slidesurl }}">{% include i18n.html en="Slides" zh="幻灯片" %}</a>{%- endif -%}
-      {%- if post.oralpresentationurl -%}{%- if post.paperurl or post.slidesurl -%} | {%- endif -%}<a href="{{ post.oralpresentationurl }}">{% include i18n.html en="Oral Presentation" zh="口头报告" %}</a>{%- endif -%}
-      {%- if post.bibtexurl -%}{%- if post.paperurl or post.slidesurl or post.oralpresentationurl -%} | {%- endif -%}<a href="{{ post.bibtexurl }}">BibTeX</a>{%- endif -%}
-      {%- if post.projecturl -%}{%- if post.paperurl or post.slidesurl or post.oralpresentationurl or post.bibtexurl -%} | {%- endif -%}<a href="{{ post.projecturl }}">{% include i18n.html en="Project Page" zh="项目主页" %}</a>{%- endif -%}
-      {%- if post.codeurl -%}{%- if post.paperurl or post.slidesurl or post.oralpresentationurl or post.bibtexurl or post.projecturl -%} | {%- endif -%}<a href="{{ post.codeurl }}">{% include i18n.html en="Code" zh="代码" %}</a>{%- endif -%}
+      {%- if post.slidesurl -%}{%- if post.paperurl -%}<span> | </span>{%- endif -%}<a href="{{ post.slidesurl }}">{% include i18n.html en="Slides" zh="幻灯片" %}</a>{%- endif -%}
+      {%- if post.oralpresentationurl -%}{%- if post.paperurl or post.slidesurl -%}<span> | </span>{%- endif -%}<a href="{{ post.oralpresentationurl }}">{% include i18n.html en="Oral Presentation" zh="口头报告" %}</a>{%- endif -%}
+      {%- if post.bibtexurl -%}{%- if post.paperurl or post.slidesurl or post.oralpresentationurl -%}<span> | </span>{%- endif -%}<a href="{{ post.bibtexurl }}">BibTeX</a>{%- endif -%}
+      {%- if post.projecturl -%}{%- if post.paperurl or post.slidesurl or post.oralpresentationurl or post.bibtexurl -%}<span> | </span>{%- endif -%}<a href="{{ post.projecturl }}">{% include i18n.html en="Project Page" zh="项目主页" %}</a>{%- endif -%}
+      {%- if post.codeurl -%}{%- if post.paperurl or post.slidesurl or post.oralpresentationurl or post.bibtexurl or post.projecturl -%}<span> | </span>{%- endif -%}<a href="{{ post.codeurl }}">{% include i18n.html en="Code" zh="代码" %}</a>{%- endif -%}
       {%- endcapture %}
     
       <p style="margin-top: 0;">{{ links }}</p>
