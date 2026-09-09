@@ -7,6 +7,7 @@ venue: 'ACM SIGGRAPH 2025'
 date: 2025-04-01
 paperurl: 'https://arxiv.org/pdf/2505.04051'
 oralpresentationurl: 'https://www.youtube.com/watch?v=iqTd2-4jPDs'
+projecturl: 'https://dreaming-huang.github.io/BuildingBlock-page/'
 codeurl: 'https://github.com/Tencent/BuildingBlock'
 teaser: buildingblock_teaser.png
 author: [Junming Huang*, Chi Wang*, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu]
@@ -14,6 +15,8 @@ author: [Junming Huang*, Chi Wang*, Letian Li, Changxin Huang, Qiang Dai, Weiwei
 <br>
 **Junming Huang**\*, Chi Wang\*, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu
 *Junming Huang and Chi Wang are co-fitst authors.
+
+[Project Page](https://dreaming-huang.github.io/BuildingBlock-page/) | [Code](https://github.com/Tencent/BuildingBlock)
 
 Three-dimensional building generation is vital for applications in gaming, virtual reality, and digital twins, yet current methods face challenges in producing diverse, structured, and hierarchically coherent buildings. We propose a hybrid approach that integrates generative models, procedural content generation (PCG), and large language models (LLMs) to address these limitations. Specifically, our method introduces a two-phase pipeline: the Layout Generation Phase (LGP) and the Building Construction Phase (BCP).<br>
 LGP reframes box-based layout generation as a point-cloud generation task, utilizing a newly constructed architectural dataset and a Transformer-based diffusion model to create globally consistent layouts. With LLMs, these layouts are extended into rule-based hierarchical designs, seamlessly incorporating component styles and spatial structures.<br>
