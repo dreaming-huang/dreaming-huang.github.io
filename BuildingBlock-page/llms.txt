@@ -1,0 +1,11 @@
+# BuildingBlock
+
+BuildingBlock is a SIGGRAPH 2025 hybrid method for text-to-building and structured building generation, combining layout diffusion, procedural content generation (PCG), and large language models (LLMs).
+
+- Authors: Junming Huang, Chi Wang, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu
+- Venue: ACM SIGGRAPH 2025 (SIGGRAPH Conference Papers '25)
+- arXiv: 2505.04051 — https://arxiv.org/abs/2505.04051
+- DOI: 10.1145/3721238.3730705 — https://doi.org/10.1145/3721238.3730705
+- Project: https://dreaming-huang.github.io/BuildingBlock-page/ (https://cv.jream.top/BuildingBlock-page/)
+- Code: https://github.com/Tencent/BuildingBlock
+- Dataset: https://huggingface.co/datasets/dreaming-huang/buildingblock

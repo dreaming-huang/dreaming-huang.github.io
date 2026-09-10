@@ -1,0 +1,6 @@
+# Extra sitemap URLs that are not generated from this repo.
+# CG-MLLM-page is a separate GitHub Pages project site, routed on cv.jream.top.
+urls:
+  - loc: "https://cv.jream.top/CG-MLLM-page/"
+    changefreq: monthly
+    priority: 0.8
