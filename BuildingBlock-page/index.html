@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BuildingBlock: A Hybrid Approach for Structured Building Generation | SIGGRAPH 2025</title>
   <meta name="description" content="BuildingBlock is a hybrid approach that integrates generative models, procedural content generation (PCG), and large language models (LLMs) for text-driven structured building generation. SIGGRAPH 2025.">
-  <meta name="keywords" content="BuildingBlock, SIGGRAPH 2025, structured building generation, procedural content generation, PCG, LLM, diffusion, layout generation, Generative 3D Modeling">
+  <meta name="keywords" content="BuildingBlock, SIGGRAPH 2025, structured building generation, text-to-building, procedural content generation, PCG, LLM, layout diffusion, layout generation, Generative 3D Modeling">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://dreaming-huang.github.io/BuildingBlock-page/">
+  <link rel="alternate" type="text/plain" title="llms.txt" href="llms.txt">
 
   <meta name="citation_title" content="BuildingBlock: A Hybrid Approach for Structured Building Generation">
   <meta name="citation_author" content="Huang, Junming">
@@ -40,30 +41,55 @@
     "@type": "ScholarlyArticle",
     "name": "BuildingBlock: A Hybrid Approach for Structured Building Generation",
     "headline": "BuildingBlock: A Hybrid Approach for Structured Building Generation",
-    "description": "BuildingBlock is a hybrid approach that integrates generative models, procedural content generation (PCG), and large language models (LLMs) for text-driven structured building generation.",
+    "description": "BuildingBlock is a SIGGRAPH 2025 hybrid approach for text-to-building and structured building generation, integrating layout diffusion, procedural content generation (PCG), and large language models (LLMs).",
     "abstract": "Three-dimensional building generation is vital for applications in gaming, virtual reality, and digital twins, yet current methods face challenges in producing diverse, structured, and hierarchically coherent buildings. We propose BuildingBlock, a hybrid approach that integrates generative models, procedural content generation (PCG), and large language models (LLMs) to address these limitations.",
     "url": "https://dreaming-huang.github.io/BuildingBlock-page/",
     "image": "https://dreaming-huang.github.io/BuildingBlock-page/assets/figure1.png",
     "datePublished": "2025-05-07",
     "dateModified": "2025-07-23",
     "inLanguage": "en",
+    "isAccessibleForFree": true,
     "keywords": [
       "BuildingBlock",
       "structured building generation",
+      "text-to-building",
       "procedural content generation",
+      "PCG",
       "large language models",
-      "diffusion models",
+      "LLM",
+      "layout diffusion",
       "layout generation",
+      "SIGGRAPH 2025",
       "Generative 3D Modeling"
     ],
     "author": [
-      {"@type": "Person", "name": "Junming Huang", "affiliation": "Zhejiang University"},
+      {
+        "@type": "Person",
+        "name": "Junming Huang",
+        "affiliation": "Zhejiang University",
+        "url": "https://cv.jream.top/",
+        "sameAs": [
+          "https://orcid.org/0009-0001-5284-9431",
+          "https://scholar.google.com/citations?user=LUE_jnQAAAAJ&hl=en",
+          "https://github.com/dreaming-huang"
+        ]
+      },
       {"@type": "Person", "name": "Chi Wang", "affiliation": "Zhejiang University"},
       {"@type": "Person", "name": "Letian Li", "affiliation": "Zhejiang University"},
       {"@type": "Person", "name": "Changxin Huang", "affiliation": "Zhejiang University"},
       {"@type": "Person", "name": "Qiang Dai", "affiliation": "LIGHTSPEED"},
       {"@type": "Person", "name": "Weiwei Xu", "affiliation": "State Key Lab CAD&CG, Zhejiang University"}
     ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "ACM",
+      "url": "https://www.acm.org/"
+    },
+    "encoding": {
+      "@type": "MediaObject",
+      "encodingFormat": "application/pdf",
+      "contentUrl": "https://arxiv.org/pdf/2505.04051"
+    },
     "isPartOf": {
       "@type": "PublicationEvent",
       "name": "SIGGRAPH Conference Papers '25",
@@ -80,7 +106,9 @@
     "sameAs": [
       "https://arxiv.org/abs/2505.04051",
       "https://doi.org/10.1145/3721238.3730705",
-      "https://github.com/Tencent/BuildingBlock"
+      "https://github.com/Tencent/BuildingBlock",
+      "https://huggingface.co/datasets/dreaming-huang/buildingblock",
+      "https://cv.jream.top/BuildingBlock-page/"
     ]
   }
   </script>
@@ -114,10 +142,12 @@
       </div>
       <p class="venue">ACM SIGGRAPH 2025</p>
       <p class="definition">
-        <strong>BuildingBlock</strong> is a hybrid approach that integrates
-        <strong>generative models</strong>, <strong>procedural content generation (PCG)</strong>,
-        and <strong>large language models (LLMs)</strong> for text-driven
-        <strong>structured building generation</strong> through a two-phase pipeline:
+        <strong>BuildingBlock</strong> is a <strong>SIGGRAPH 2025</strong> hybrid method
+        for <strong>text-to-building</strong> and
+        <strong>structured building generation</strong>. It integrates
+        <strong>generative models</strong>, <strong>layout diffusion</strong>,
+        <strong>procedural content generation (PCG)</strong>,
+        and <strong>large language models (LLMs)</strong> through a two-phase pipeline:
         the <strong>Layout Generation Phase (LGP)</strong> and the
         <strong>Building Construction Phase (BCP)</strong>.
       </p>
@@ -130,13 +160,15 @@
       <div class="keywords">
         <p class="keywords-label">Keywords</p>
         <p class="keyword-list">
-          <span>Generative 3D Modeling</span>
-          <span>Procedural &amp; Data-driven Modeling</span>
+          <span>SIGGRAPH 2025</span>
+          <span>Text-to-Building</span>
           <span>Structured Building Generation</span>
+          <span>Layout Diffusion</span>
           <span>Layout Generation</span>
           <span>PCG</span>
-          <span>LLMs</span>
-          <span>Diffusion</span>
+          <span>LLM</span>
+          <span>Generative 3D Modeling</span>
+          <span>Procedural &amp; Data-driven Modeling</span>
         </p>
       </div>
     </div>
@@ -168,6 +200,15 @@
         <div class="fact-card">
           <dt>Editing</dt>
           <dd>Localized layout edits (add, delete, or restyle components) update the corresponding building parts while leaving the rest unchanged.</dd>
+        </div>
+        <div class="fact-card">
+          <dt>Resources</dt>
+          <dd>
+            <a href="https://arxiv.org/abs/2505.04051">arXiv 2505.04051</a>,
+            <a href="https://doi.org/10.1145/3721238.3730705">DOI 10.1145/3721238.3730705</a>,
+            <a href="https://github.com/Tencent/BuildingBlock">code</a>,
+            and <a href="https://huggingface.co/datasets/dreaming-huang/buildingblock">dataset</a>.
+          </dd>
         </div>
       </dl>
     </section>

@@ -91,8 +91,13 @@
       "@context" : "http://schema.org",
       "@type" : "{% if site.social.type %}{{ site.social.type }}{% else %}Person{% endif %}",
       "name" : "{{ site.social.name | default: site.name }}",
-      "url" : {{ seo_url | jsonify }},
-      "sameAs" : {{ site.social.links | jsonify }}
+      "url" : {{ seo_url | jsonify }}{% if site.author.employer %},
+      "affiliation" : {
+        "@type" : "Organization",
+        "name" : {{ site.author.employer | jsonify }}
+      }{% endif %}{% if site.author.avatar %},
+      "image" : {{ site.author.avatar | prepend: "/images/" | prepend: seo_url | jsonify }}{% endif %}{% if site.social.links %},
+      "sameAs" : {{ site.social.links | jsonify }}{% endif %}
     }
   </script>
 {% endif %}

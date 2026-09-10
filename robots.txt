@@ -1,0 +1,7 @@
+# Repo-owned robots.txt. Cloudflare may still inject AI-scraper Disallows
+# on cv.jream.top; this file does not add those blocks and does not Disallow
+# Googlebot, pages, or PDFs.
+User-agent: *
+Allow: /
+
+Sitemap: https://cv.jream.top/sitemap.xml
