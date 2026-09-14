@@ -1,0 +1,76 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % default: Adobe OTFs under fonts/zh_CN-Adobe/
+% \usepackage{zh_CN-fandol} % fallback: TeX Live Fandol if Adobe fonts are not present
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage[colorlinks,urlcolor=blue,linkcolor=blue]{hyperref}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{Junming Huang}
+\centerline{\intension{Computer Graphics; Generative Models; Embodied AI}}
+\vspace{1.2ex}
+\contactInfo{junminghuang@zju.edu.cn}{(+86) 132-6788-3366}{\href{https://cv.jream.top/}{cv.jream.top}}
+
+\section{\faGraduationCap\ Education}
+\datedsubsection{\textbf{Zhejiang University}}{Sep. 2023 -- Jun. 2028 (expected)}
+\textit{Ph.D. student} (combined Master--Ph.D.) in Computer Science, State Key Lab of CAD\&CG and Pujiang Laboratory. Advisor: Prof. Weiwei Xu
+\datedsubsection{\textbf{Yunnan University}}{Sep. 2019 -- Jun. 2023}
+\textit{B.E.} in Software Engineering, School of Software
+
+\section{\faSitemap\ Intern Experience}
+\datedsubsection{\textbf{Tencent Lightspeed Studios}}{Apr. 2024 -- Present}
+\role{Research Intern (Computer Graphics, 3D Generation)}{Mentor: Qiang Dai}
+\begin{itemize}
+  \item Developed a diffusion model-guided method for structured building generation using procedural content generation (PCG).
+  \item A paper accepted by SIGGRAPH 2025.
+  \item Developed a Unified MLLM for 3D understanding and generation.
+  \item A paper accepted by ICML 2026.
+\end{itemize}
+
+\datedsubsection{\textbf{Kuaishou (Kwai)}}{Apr. 2023 -- Apr. 2024}
+\role{Research Intern (Computer Graphics, Digital Human Generation)}{Mentors: Pengfei Wan, Chongyang Ma}
+\begin{itemize}
+  \item Led the research and development of a text-driven facial material generation method.
+  \item A paper accepted by TPAMI and one national invention patent.
+\end{itemize}
+
+\section{\faUsers\ Projects}
+\datedsubsection{\textbf{Physically Based Facial Texture Generation in the Wild} (TPAMI 2025)}{Apr. 2023 -- Apr. 2024}
+Co-first author. A multi-stage framework for text-driven physically based facial texture generation in the wild, compatible with the PBR pipeline and free of Light Stage capture. Integrates differentiable rendering and texture-disentanglement regularization to train a GAN, aligns its latent space with text embeddings, and introduces an edge-aware Score Distillation Sampling (EASDS) boosting scheme for more diverse generation and efficient SDS optimization.
+\datedsubsection{\textbf{BuildingBlock: Structured Building Generation} (SIGGRAPH 2025)}{Apr. 2024 -- Apr. 2025}
+Co-first author. A hybrid approach that integrates generative models, procedural content generation (PCG), and large language models. The Layout Generation Phase recasts box-based layout generation as point-cloud generation and extends layouts into rule-based hierarchical designs with LLMs; the Building Construction Phase uses those layouts to guide PCG for locally customizable, high-quality structured buildings.
+\datedsubsection{\textbf{CG-MLLM: 3D Captioning and Generation} (ICML 2026)}{Apr. 2024 -- May 2026}
+A unified Multi-modal Large Language Model for 3D captioning and high-resolution 3D generation. A Mixture-of-Transformer architecture decouples token-level and block-level autoregressive modeling, combining a pre-trained vision-language backbone with a 3D VAE latent space so standard tokens and spatial blocks interact in one framework.
+\datedsubsection{\textbf{National Key Project on High-Altitude Inspection}}{}
+Participated in a national key project on high-altitude inspection.
+
+\section{\faFileTextO\ Publications}
+\begin{itemize}[parsep=0.35ex]
+  \item \textbf{Junming Huang}, Chi Wang, Letian Li, Guangkai Xu, Donglin Huang, Hao Chen, Qiang Dai, Weiwei Xu.\\
+  \textit{CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models}. ICML 2026.
+  \item Donglin Huang*, Yongyuan Li*, Tianhang Liu*, \textbf{Junming Huang}, Xiaoda Yang, Chi Wang, Weiwei Xu.\\
+  \textit{VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework}. WACV 2026 Oral.
+  \item Chi Wang*, \textbf{Junming Huang}*, Rong Zhang*, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu.\\
+  \textit{Physically Based Facial Texture Generation in the Wild}. IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2025.
+  \item \textbf{Junming Huang}*, Chi Wang*, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu.\\
+  \textit{BuildingBlock: A Hybrid Approach for Structured Building Generation}. ACM SIGGRAPH 2025.
+  \item Zini Chen, \textbf{Junming Huang}, Rong Zhang, Jiamin Xu, Cheng Peng, Chi Wang, Weiwei Xu.\\
+  \textit{HetScene: Heterogeneity-Aware Diffusion for Dense Indoor Scene Generation}. arXiv:2605.13586, under review.
+\end{itemize}
+
+\section{\faTrophy\ Honors}
+\datedline{\textit{Oral}~~Awarded at WACV 2026 (VividAnimator)}{Nov. 2025}
+\datedline{National invention patent (text-driven facial material generation, during the Kuaishou internship)}{2024}
+
+\section{\faCogs\ Skills}
+\begin{itemize}[parsep=0.5ex]
+  \item Research: generative models (MLLMs and diffusion models), computer graphics, embodied AI.
+  \item Publications at IEEE TPAMI, ACM SIGGRAPH, ICML, and WACV Oral.
+\end{itemize}
+
+\end{document}

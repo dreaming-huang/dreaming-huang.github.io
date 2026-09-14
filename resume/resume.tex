@@ -1,0 +1,76 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % default: Adobe OTFs under fonts/zh_CN-Adobe/
+% \usepackage{zh_CN-fandol} % fallback: TeX Live Fandol if Adobe fonts are not present
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage[colorlinks,urlcolor=blue,linkcolor=blue]{hyperref}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{黄俊铭}
+\centerline{\intension{计算机图形学 | 生成模型 | 具身智能}}
+\vspace{1.2ex}
+\contactInfo{junminghuang@zju.edu.cn}{(+86) 132-6788-3366}{\href{https://cv.jream.top/}{cv.jream.top}}
+
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{浙江大学}~~博士生（硕博连读），计算机科学与技术}{2023.09 -- 2028.06（预计）}
+CAD\&CG 国家重点实验室 / 浦江实验室，导师：许威威 教授
+\datedsubsection{\textbf{云南大学}~~工学学士，软件工程}{2019.09 -- 2023.06}
+软件学院
+
+\section{\faSitemap\ 实习经历}
+\datedsubsection{\textbf{腾讯光子工作室}~~科研实习（计算机图形学、三维生成）}{2024.04 -- 至今}
+\role{导师}{戴强}
+\begin{itemize}
+  \item 提出基于扩散模型引导、结合程序化内容生成（PCG）的结构化建筑生成方法。
+  \item 相关论文被 ACM SIGGRAPH 2025 录用。
+  \item 研发面向三维理解与生成的统一多模态大语言模型。
+  \item 相关论文被 ICML 2026 录用。
+\end{itemize}
+
+\datedsubsection{\textbf{快手}~~科研实习（计算机图形学、数字人生成）}{2023.04 -- 2024.04}
+\role{导师}{万鹏飞、马重阳}
+\begin{itemize}
+  \item 负责文本驱动的面部材质生成方法的研究与开发。
+  \item 相关论文被 IEEE TPAMI 录用，并申请一项国家发明专利。
+\end{itemize}
+
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{野外场景物理基面部材质生成}~~IEEE TPAMI 2025}{2023.04 -- 2024.04}
+共同一作。提出野外无约束场景下、兼容物理渲染（PBR）管线的文本驱动面部材质生成方法，摆脱对 Light Stage 等昂贵采集系统的依赖；结合可微渲染与纹理解耦正则训练生成对抗网络，并将潜空间与文本嵌入对齐，设计边缘感知 Score Distillation Sampling（EASDS）以提升生成多样性与优化效率。
+\datedsubsection{\textbf{BuildingBlock 结构化建筑生成}~~ACM SIGGRAPH 2025}{2024.04 -- 2025.04}
+共同一作。提出融合生成模型、程序化内容生成（PCG）与大语言模型的混合式结构化建筑生成方法：布局生成阶段将盒式布局建模为点云生成，再用 LLM 扩展为规则化层次设计；建筑构建阶段以布局引导 PCG，实现可局部定制的高质量结构化建筑。
+\datedsubsection{\textbf{CG-MLLM 三维理解与生成}~~ICML 2026}{2024.04 -- 2026.05}
+提出面向三维描述与高分辨率三维生成的统一多模态大语言模型。采用 Mixture-of-Transformer 架构，解耦 Token 级与 Block 级自回归建模，将预训练视觉--语言骨干与三维 VAE 潜空间结合，在同一框架内完成三维 captioning 与高保真几何生成。
+\datedsubsection{\textbf{高海拔巡检国家重点项目}}{}
+参与高海拔巡检国家重点项目。
+
+\section{\faFileTextO\ 学术论文}
+\begin{itemize}[parsep=0.35ex]
+  \item \textbf{Junming Huang}, Chi Wang, Letian Li, Guangkai Xu, Donglin Huang, Hao Chen, Qiang Dai, Weiwei Xu.\\
+  \textit{CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models}. ICML 2026.
+  \item Donglin Huang*, Yongyuan Li*, Tianhang Liu*, \textbf{Junming Huang}, Xiaoda Yang, Chi Wang, Weiwei Xu.\\
+  \textit{VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework}. WACV 2026 Oral.
+  \item Chi Wang*, \textbf{Junming Huang}*, Rong Zhang*, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu.\\
+  \textit{Physically Based Facial Texture Generation in the Wild}. IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2025.
+  \item \textbf{Junming Huang}*, Chi Wang*, Letian Li, Changxin Huang, Qiang Dai, Weiwei Xu.\\
+  \textit{BuildingBlock: A Hybrid Approach for Structured Building Generation}. ACM SIGGRAPH 2025.
+  \item Zini Chen, \textbf{Junming Huang}, Rong Zhang, Jiamin Xu, Cheng Peng, Chi Wang, Weiwei Xu.\\
+  \textit{HetScene: Heterogeneity-Aware Diffusion for Dense Indoor Scene Generation}. arXiv:2605.13586, under review.
+\end{itemize}
+
+\section{\faTrophy\ 荣誉与专利}
+\datedline{WACV 2026 Oral（VividAnimator）}{2025.11}
+\datedline{国家发明专利一项（文本驱动面部材质生成，快手实习期间）}{2024}
+
+\section{\faCogs\ 个人能力}
+\begin{itemize}[parsep=0.5ex]
+  \item 研究方向：生成模型（多模态大语言模型、扩散模型）、计算机图形学、具身智能。
+  \item 代表性成果发表于 IEEE TPAMI、ACM SIGGRAPH、ICML、WACV Oral。
+\end{itemize}
+
+\end{document}

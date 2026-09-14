@@ -1,0 +1,32 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{zh_CN-Adobefonts_external}[2015/05/25 zh_CN-Adobefonts_internal Package]
+
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+% Optional Adobe Source Han / Adobe Song-Hei-Kai-Fang path.
+% Place the four OTFs under fonts/zh_CN-Adobe/ (gitignored; not redistributable).
+% https://github.com/boathit/CTEX/blob/master/texmf/tex/latex/ctex/fontset/ctex-xecjk-adobefonts.def
+% vim:ft=tex
+
+\defaultfontfeatures{Path = fonts/zh_CN-Adobe/, Mapping=tex-text}
+
+\setCJKmainfont[
+BoldFont=AdobeHeitiStd-Regular.otf,
+ItalicFont=AdobeKaitiStd-Regular.otf,
+SmallCapsFont=AdobeHeitiStd-Regular.otf
+]{AdobeSongStd-Light.otf}
+\setCJKsansfont{AdobeHeitiStd-Regular.otf}
+\setCJKmonofont{AdobeFangsongStd-Regular.otf}
+
+\setCJKfamilyfont{zhsong}{AdobeSongStd-Light.otf}
+\setCJKfamilyfont{zhhei}{AdobeHeitiStd-Regular.otf}
+\setCJKfamilyfont{zhfs}{AdobeFangsongStd-Regular.otf}
+\setCJKfamilyfont{zhkai}{AdobeKaitiStd-Regular.otf}
+
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{zhhei}} % 黑体
+\newcommand*{\kaishu}{\CJKfamily{zhkai}} % 楷书
+\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+
+\endinput
