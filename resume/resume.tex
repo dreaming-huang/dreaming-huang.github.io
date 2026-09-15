@@ -1,114 +1,178 @@
 % !TEX TS-program = xelatex
 % !TEX encoding = UTF-8 Unicode
 % !Mode:: "TeX:UTF-8"
+%
+% 中文简历 —— 黄俊铭
+% 编译：xelatex resume.tex  （或 tectonic -X compile resume.tex）
+%
+% 结构：第 1 页 = 核心内容（教育 / 产研代表项目 / 其他项目 / 技能）
+%       第 2 页 = 附录（论文成果全览 / 荣誉奖项）
 
 \documentclass{resume}
-\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-\usepackage{linespacing_fix} % disable extra space before next section
-\usepackage{color}
-\usepackage{marvosym}
-\usepackage[colorlinks,linkcolor=blue]{hyperref}
+\usepackage{zh_CN-Adobefonts_external} % 中文字体（./fonts/zh_CN-Adobe/）
+\usepackage{linespacing_fix}           % 修正 setspace 引入的多余间距
+\usepackage{xcolor}
+\usepackage[colorlinks,linkcolor=blue,urlcolor=Accent]{hyperref}
+\usepackage{marvosym}                  % \Letter（通讯作者标记）
+
+% 中文版单独收紧页边距与版块间距，不影响 resume_en.tex
+\geometry{left=0.72in,right=0.72in,top=0.45in,bottom=0.45in}
+\titlespacing*{\section}{0cm}{*1.6}{*1.0}
+\setlist[itemize]{topsep=0.15em, parsep=0.1ex, leftmargin=1.4pc}
+
+% ---------- 统一的强调样式（全文只用这两种，避免视觉噪音）----------
+\definecolor{Accent}{RGB}{0,84,166}
+\newcommand{\venue}[1]{\textbf{\color{Accent}#1}}   % 会议 / 期刊
+\newcommand{\hl}[1]{\textbf{#1}}                    % 量化指标、关键结论
+
+% ---------- 结构化条目宏 ----------
+% 公司 / 机构行：\org{名称}{角色或主管}{起止时间}
+\newcommand{\org}[3]{%
+  \datedsubsection{\textbf{#1}\hskip 1.2em {\normalfont #2}}{#3}%
+}
+% 代表项目标题行：\projline{项目名}{成果标签}
+\newcommand{\projline}[2]{%
+  \vspace{0.3ex}\par\textbf{#1}\hfill #2\par\vspace{-0.6ex}%
+}
+% 其他项目（紧凑型）：\otherproj{项目名}{方向}{起止时间}{一句话说明}
+\newcommand{\otherproj}[4]{%
+  \datedsubsection{\textbf{#1}\hskip 1em {\normalfont\small\textit{#2}}}{#3}%
+  \vspace{-0.3ex}{\small #4}\par%
+}
+% 论文条目：\paper{标题}{作者}{会议} —— 左侧标题/作者，右侧固定宽度会议名
+\newcommand{\paper}[3]{%
+  \item
+  \begin{minipage}[t]{0.805\linewidth}
+    #1\\{\small #2}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}[t]{0.165\linewidth}
+    \raggedleft\small\textbf{#3}
+  \end{minipage}%
+}
 
 \begin{document}
 \pagenumbering{gobble}
-\titlespacing*{\section}{0cm}{*0.85}{*0.65}
-\titlespacing*{\subsection}{0cm}{*0.75}{*0.22}
-\setlist[itemize]{topsep=0.06em, itemsep=0.04em, leftmargin=1.5pc}
-\setlist[enumerate]{topsep=0.12em, itemsep=0.35em, leftmargin=1.5pc}
+
+% ======================================================================
+%                          第 1 页：核心内容
+% ======================================================================
 
 \name{黄俊铭}
-\centerline{\intension{多模态大语言模型 | 3D空间智能}}
-\vspace{0.35ex}
-\contactInfo{junminghuang@zju.edu.cn}{(+86) 132-6788-3366}{\href{https://cv.jream.top/}{Homepage}}
+% \centerline{\small 求职意向：多模态生成 \textperiodcentered\ 3D 生成 \textperiodcentered\ 大模型算法}
+\vspace{1ex}
+\contactInfo{junminghuang@zju.edu.cn}{(+86) 132-6788-3366}
+{\href{https://dreaming-huang.github.io/}{个人主页}}
 
+% ---------------------------- 教育背景 ----------------------------
 \section{\faGraduationCap\ 教育背景}
-\datedsubsection{\textbf{浙江大学}~~博士（硕博连读）}{2023.09 -- 2028.06（预计）}
-CAD\&CG 全国重点实验室 / 浦江实验室，导师：许威威教授
-\datedsubsection{\textbf{云南大学}~~软件学院~~学士}{2019.09 -- 2023.07}
 
-\section{\faSitemap\ 实习经历}
-\datedsubsection{\textbf{腾讯光子工作室}~~科研实习（3D 空间智能）}{2024.04 -- 至今}
-\role{项目主管}{戴强}
+\datedsubsection{%
+  \begin{tabular}{@{}p{8.2em}p{11em}@{}l@{}}
+    \textbf{浙江大学}（985） & 计算机科学与技术学院 & 博士（硕博连读）\hskip 2em
+  \end{tabular}%
+}{2023.09 -- 2028.06（预计）}
+\vspace{-0.3ex}
+{\small CAD\&CG 全国重点实验室 \textperiodcentered\ 浦江实验室\quad 导师：许威威 教授\quad 方向：多模态理解与生成、图形学、具身智能}\par
+\vspace{0.2ex}
+{\small 科研产出：论文 6 篇，其中\hl{第一作者 / 共同一作 5 篇}，详细论文列表见第 2 页附录。}\par
+
+\datedsubsection{%
+  \begin{tabular}{@{}p{8.2em}p{11em}@{}l@{}}
+    \textbf{云南大学}（211） & 软件学院 & 学士\hskip 2em
+  \end{tabular}%
+}{2019.09 -- 2023.07}
+
+% ---------------------------- 专业技能 ----------------------------
+\section{\faCogs\ 经验与技能}
+{\small
+\begin{itemize}[parsep=0.2ex]
+  \item \textbf{研究背景}：扩散模型、多模态大语言模型(理解与生成)、计算机图形学。
+  \item \textbf{训练工程}：\hl{多机多卡预/后训练、百卡K8S集群作业管理、数据搜集与处理pipeline构建。}
+  \item \textbf{落地交付}：研究成果多次落地工业产线、具身智能边缘算力模型落地部署。
+  \item \textbf{编程工具}：C++、Python / PyTorch（主力）、多种AI Coding工具。
+\end{itemize}
+}
+
+% ---------------------- 产研合作与代表项目 ----------------------
+\section{\faBuilding\ 产研合作与代表项目}
+
+\org{快手（Kwai）}{项目主管：万鹏飞、马重阳}{2023.04 -- 2024.04}
+\projline{文本驱动 PBR 人脸材质贴图生成}{\venue{TPAMI 2025}（共同一作 / 学生一作）}
 \begin{itemize}
-  \item 独立负责结构化建筑生成与 3D 理解/生成统一模型两条产研线：定方案、带训练、对接业务管线。
-  \item 把研究原型推进到可交付资产生产：BuildingBlock 接入和平精英；CG-MLLM 落地光子内部艺术设计平台。
+  \item 首次提出\textbf{基于渐进式隐空间微调}的文本驱动人脸材质生成方法，借助耦合纹理贴图数据集 FFHQ-UV，在\textbf{无 PBR 标注数据}的条件下生成高质量 PBR 人脸贴图，并可灵活扩展隐空间。
+  \item 生成质量相比同期 SOTA 方法\hl{提升 20\%}，方法已用于快手数字人资产生成链路。
 \end{itemize}
 
-\datedsubsection{\textbf{快手}~~科研实习（数字人、PBR 材质）}{2023.04 -- 2024.04}
-\role{项目主管}{万鹏飞、马重阳}
+\org{腾讯（光子工作室群）}{项目主管：戴强}{2024.04 -- 至今}
+\projline{BuildingBlock：两阶段混合式结构化 3D 建筑与场景生成}{\venue{SIGGRAPH 2025}（第一作者）}
 \begin{itemize}
-  \item 牵头文本驱动人脸 PBR 材质：方法选型、训练与数字人资产管线接入，完成可用贴图交付。
-  \item 相关工作申请国家发明专利一项。
+  \item \textbf{首次提出「先生成物体组件布局、再依布局生成物体」的结构化生成范式}：第一阶段用扩散模型预测供 PCG 使用的建筑布局，第二阶段利用agent填充组件细节并调用 PCG SDK完成资产装配。
+  \item 产出精细、可控、可交互的建筑资产；布局生成 FID 相比同期 SOTA \hl{下降 70\%}，生成速度\hl{提升 200\%}；\textbf{相关工作为《和平精英》项目组生产建筑资产}。
+\end{itemize}
+\projline{CG-MLLM：首个原生 3D 理解与生成统一多模态大模型}{\venue{ICML 2026}（第一作者）}
+\begin{itemize}
+  \item 将文本、图像与 3D 资产统一到\textbf{基于编码方案划分的 MoT 多模态大模型框架}中。
+  \item 模型既能理解 3D 内容，也能端到端生成高质量 3D 对象，在「LLM 驱动 3D 生成」与「3D 视觉理解」两类任务上均达到 \hl{SOTA}；\textbf{即将在腾讯光子内部艺术设计平台落地}。
 \end{itemize}
 
-\section{\faCogs\ 精选项目}
-\datedsubsection{\textbf{BuildingBlock}~~结构化建筑生成}{SIGGRAPH 2025 · 一作}
-\begin{itemize}
-  \item \textbf{问题}~~游戏建筑需精细、可控、可交互，端到端生成难对接 PCG 资产管线。
-  \item \textbf{方法}~~先布局后 PCG：LGP 将盒式布局当作点云，用 Transformer 扩散生成全局一致布局，LLM 补组件风格与层级规则；BCP 按布局调用 PCG 拼装可局部编辑建筑。
-  \item \textbf{结果}~~相对当年强基线，布局 FID $-70\%$、速度 $+200\%$；SIGGRAPH 2025 一作，用于和平精英。
-\end{itemize}
+% ---------------------- 其他项目经历（紧凑）----------------------
+% 该版块起收紧 subsection 间距，使每条压到「标题 + 一句话」
+\titlespacing*{\subsection}{0cm}{*0.7}{*0.2}
 
-\datedsubsection{\textbf{CG-MLLM}~~3D 理解与生成统一模型}{ICML 2026 · 一作}
-\begin{itemize}
-  \item \textbf{问题}~~现有 MLLM 的 3D 多停留在低分辨率网格或粗代理，理解与高分辨率生成难同框。
-  \item \textbf{方法}~~Mixture-of-Transformer：TokenAR 处理文本/图像 token，BlockAR 处理空间块；接入预训练视觉语言骨干与 3D VAE 潜空间，实现长上下文交互。
-  \item \textbf{结果}~~LLM 路线 3D 生成与视觉理解达 SOTA；ICML 2026 一作，落地光子内部艺术设计平台。
-\end{itemize}
+\section{\faCubes\ 部分项目经历}
 
-\datedsubsection{\textbf{PBR 人脸材质}~~文本驱动贴图生成}{TPAMI 2025 · 共一（学生一作）}
-\begin{itemize}
-  \item \textbf{问题}~~野外图到 PBR 人脸材质缺配对监督，现有方法或难兼容管线，或依赖 Light Stage。
-  \item \textbf{方法}~~基于 FFHQ-UV 的渐进隐空间微调：可微渲染 + 贴图解耦训练 GAN 采样，对齐文本空间，再用边缘感知 SDS（EASDS）提升多样性与优化效率。
-  \item \textbf{结果}~~无配对 PBR 监督下仍可生成物理材质；相对当年强基线质量约 $+20\%$；TPAMI 2025 共一。
-\end{itemize}
+\otherproj{高空智能巡检一体化系统}{主持 \textperiodcentered\ 具身智能、边缘计算}{2021.10 -- 2023.10}
+{Jetson Nano 边缘端经 TensorRT 部署 YOLOv5 实现电力设备缺陷实时检测，联动大疆飞控自主巡检，端云协同形成「检测—定位—告警」闭环。项目获大学生创新创业训练计划\hl{国家级重点}支持（全国 \hl{Top 0.2\%}，全省前十)}
 
-\section{\faLightbulbO\ 扩展研究}
-\begin{itemize}
-  \item \textbf{扩散加速}~~DiT + 一致性模型：VAE 预编码 latent，拉直去噪轨迹，小步数采样质量优于原 DiT。
-  \item \textbf{稀疏 3D 生成}~~八叉树 + MinkowskiEngine：3D VAE 压缩高分辨率物体，稀疏卷积去噪（自注意力 / 窗口注意力 / GN / LN）。
-  \item \textbf{身份一致生成}~~双角色分镜：OMG+InstantID 上增加检测、姿态与换装，并用 LLM 判断文本与约束冲突。
-  \item \textbf{具身巡检}~~高空智能巡检（国家级重点大创，Top 0.2\%）：无人机 + Jetson Nano / TensorRT YOLOv5，端云协同检测—定位—告警。
-\end{itemize}
+\otherproj{无条件 3D 生成模型的条件化控制}{3D 物体生成}{2022.11 -- 2023.03}
+{用 CLIP 图文空间映射为 GRAF、StyleNeRF 等无条件模型引入文本条件控制，无需额外标注。}
 
-\section{\faWrench\ 技能}
-多模态大语言模型、3D 空间智能、扩散模型、计算机图形、具身智能。
+\otherproj{基于一致性模型的 DiT 采样加速}{图像生成}{2023.12 -- 2024.03}
+{对 DiT 去噪轨迹做路径拉直并引入一致性模型蒸馏，小步数采样下图像质量显著优于原模型。}
 
+\otherproj{基于八叉树的 3D 物体生成}{3D 物体生成}{2024.04 -- 2024.09}
+{用 Minkowski-Engine 构建八叉树 3D-VAE，并补齐自注意力、GN / LN 模块搭建稀疏卷积去噪网络。}
+
+\otherproj{双角色剧情图像生成}{图像生成}{2024.07 -- 2024.10}
+{基于 OMG + InstantID 改进，新增姿态控制与服装替换模块，补齐姿态与着装一致性。}
+
+
+
+% ======================================================================
+%                            第 2 页：附录
+% ======================================================================
 \newpage
-\section{\faFileTextO\ 论文}
-\vspace{0.4ex}
-\begin{enumerate}[parsep=0.5ex]
+\titlespacing*{\subsection}{0cm}{*1.8}{*0.6}
 
-    \item Physically Based Facial Texture Generation In The Wild
+\section{\faFileTextO\ 附录 \textperiodcentered\ 论文成果}
+\begin{enumerate}[parsep=1.4ex]
 
-Chi Wang$^{*}$, \textbf{Junming Huang}$^{*}$, Rong Zhang$^{*}$, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu\textsuperscript{\Letter}
-    \hfill\textbf{TPAMI 2025}
+  \paper{Physically Based Facial Texture Generation In The Wild}
+  {Chi Wang$^{*}$, \textbf{Junming Huang}$^{*}$, Rong Zhang$^{*}$, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu\textsuperscript{\Letter}}
+  {TPAMI 2025}
 
-    \item BuildingBlock: A Hybrid Approach for Structured Building Generation
+  \paper{BuildingBlock: A Hybrid Approach for Structured Building Generation}
+  {\textbf{Junming Huang}$^{*}$, Chi Wang$^{*}$, Letian Li, Changxin Huang, Qiang Dai\textsuperscript{\Letter}, Weiwei Xu\textsuperscript{\Letter}}
+  {SIGGRAPH 2025}
 
-    \textbf{Junming Huang}$^{*}$, Chi Wang$^{*}$, Letian Li, Changxin Huang, Qiang Dai\textsuperscript{\Letter}, Weiwei Xu\textsuperscript{\Letter}
+  \paper{CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models}
+  {\textbf{Junming Huang}, Chi Wang, Letian Li, Guangkai Xu, Donglin Huang, Hao Chen, Qiang Dai, Weiwei Xu\textsuperscript{\Letter}}
+  {ICML 2026}
 
-    \hfill\textbf{SIGGRAPH 2025}
+  \paper{VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework}
+  {Donglin Huang$^{*}$, Yongyuan Li$^{*}$, Tianhang Liu$^{*}$, \textbf{Junming Huang}, Xiaoda Yang, Chi Wang, Weiwei Xu\textsuperscript{\Letter}}
+  {WACV 2026 Oral}
 
-    \item CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models
+  \paper{HetScene: Heterogeneity-Aware Diffusion for Dense Indoor Scene Generation}
+  {Zini Chen$^{*}$, \textbf{Junming Huang}$^{*}$, Rong Zhang, Jiamin Xu, Cheng Peng, Chi Wang\textsuperscript{\Letter}, Weiwei Xu}
+  {Under Review}
 
-    \textbf{Junming Huang}, Chi Wang, Letian Li, Guangkai Xu, Donglin Huang, Hao Chen, Qiang Dai, Weiwei Xu\textsuperscript{\Letter}
-
-    \hfill\textbf{ICML 2026}
-
-    \item VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework
-
-    Donglin Huang$^{*}$, Yongyuan Li$^{*}$, Tianhang Liu$^{*}$, \textbf{Junming Huang}, Xiaoda Yang, Chi Wang, Weiwei Xu\textsuperscript{\Letter}
-
-    \hfill\textbf{WACV 2026 Oral}
-
-    \item HetScene: Heterogeneity-Aware Diffusion for Dense Indoor Scene Generation
-
-    Zini Chen$^{*}$, \textbf{Junming Huang}$^{*}$, Rong Zhang, Jiamin Xu, Cheng Peng, Chi Wang\textsuperscript{\Letter}, Weiwei Xu
-
-    \hfill\textbf{Arxiv(Under Review)}
-
+  \paper{Lens3D: Target-Conditioned Visual Foveation for Fine-Grained 3D Understanding}
+  {\textbf{Junming Huang}, Zini Chen, Shuaiying Hou, Chi Wang, Qiang Dai, Weiwei Xu\textsuperscript{\Letter}}
+  {Under Review}
 \end{enumerate}
-{\small 完整列表与项目页：\href{https://cv.jream.top/}{https://cv.jream.top/}}
+{\small \textit{注：$^{*}$ 表示共同一作，\Letter\ 表示通讯作者。}}
+
 
 \end{document}
