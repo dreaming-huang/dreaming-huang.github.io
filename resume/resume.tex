@@ -6,18 +6,19 @@
 \usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{color}
+\usepackage{marvosym}
 \usepackage[colorlinks,linkcolor=blue]{hyperref}
 
 \begin{document}
 \pagenumbering{gobble}
-\titlespacing*{\section}{0cm}{*1.1}{*0.9}
-\titlespacing*{\subsection}{0cm}{*1.0}{*0.35}
-\setlist[itemize]{topsep=0.12em, itemsep=0.08em, leftmargin=1.5pc}
-\setlist[enumerate]{topsep=0.12em, itemsep=0.12em, leftmargin=1.5pc}
+\titlespacing*{\section}{0cm}{*0.85}{*0.65}
+\titlespacing*{\subsection}{0cm}{*0.75}{*0.22}
+\setlist[itemize]{topsep=0.06em, itemsep=0.04em, leftmargin=1.5pc}
+\setlist[enumerate]{topsep=0.12em, itemsep=0.35em, leftmargin=1.5pc}
 
 \name{黄俊铭}
 \centerline{\intension{3D生成 | 计算机图形 | MLLM}}
-\vspace{0.6ex}
+\vspace{0.35ex}
 \contactInfo{junminghuang@zju.edu.cn}{(+86) 132-6788-3366}{\href{https://cv.jream.top/}{Homepage}}
 
 \section{\faGraduationCap\ 教育背景}
@@ -30,46 +31,45 @@ CAD\&CG 全国重点实验室 / 浦江实验室，导师：许威威教授
 \datedsubsection{\textbf{腾讯光子工作室}~~科研实习（计算机图形、3D 生成）}{2024.04 -- 至今}
 \role{项目主管}{戴强}
 \begin{itemize}
-  \item 覆盖结构化建筑生成与 3D 理解/生成统一模型两条产研线，分别对接游戏资产生产与内部设计工具。
-  \item 与业务协作，将生成管线接入和平精英相关建筑资产生产，并推动统一 3D MLLM 能力进入光子内部艺术设计平台。
+  \item 覆盖结构化建筑生成与 3D 理解/生成统一模型两条产研线，承担方案、训练与业务对接。
+  \item 与光子业务协作，把研究原型推进到可交付的资产生产与内部工具接入。
 \end{itemize}
 
 \datedsubsection{\textbf{快手}~~科研实习（计算机图形、数字人）}{2023.04 -- 2024.04}
 \role{项目主管}{万鹏飞、马重阳}
 \begin{itemize}
-  \item 负责文本驱动人脸材质方向，对接数字人资产管线，完成方法到材质生产链路的工程化。
+  \item 负责文本驱动人脸材质方向，对接数字人资产管线，完成方法到材质生产的工程化。
   \item 相关工作申请国家发明专利一项。
 \end{itemize}
 
 \section{\faCogs\ 精选项目}
 \datedsubsection{\textbf{BuildingBlock}~~结构化建筑生成}{SIGGRAPH 2025 · 一作}
 \begin{itemize}
-  \item \textbf{问题}~~游戏与互动场景需要精细、可控、可交互的结构化建筑，端到端生成难直接对接 PCG 资产管线。
-  \item \textbf{方法}~~扩散引导的两阶段混合：先预测 PCG 友好布局，再按文本生成组件细节并调用 PCG 合成；将「先布局、后物体」用于建筑生成。
-  \item \textbf{结果}~~相对当年强基线，布局 FID 下降 70\%、速度提升 200\%；SIGGRAPH 2025 一作，资产落地和平精英。
+  \item \textbf{问题}~~游戏建筑需精细、可控、可交互，端到端生成难对接 PCG 资产管线。
+  \item \textbf{方法}~~扩散两阶段混合：先预测 PCG 友好布局，再按文本生成组件并调用 PCG。
+  \item \textbf{结果}~~相对当年强基线，布局 FID $-70\%$、速度 $+200\%$；SIGGRAPH 2025 一作，用于和平精英。
 \end{itemize}
 
 \datedsubsection{\textbf{CG-MLLM}~~3D 理解与生成统一模型}{ICML 2026 · 一作}
 \begin{itemize}
-  \item \textbf{问题}~~现有 LLM/MLLM 的 3D 能力多停留在低分辨率网格或粗结构代理，理解与高分辨率生成难以同框。
-  \item \textbf{方法}~~将文本、图像、3D 资产统一到按建模划分的 MOT 框架：TokenAR 处理常规 token，BlockAR 处理空间 block，并接入 3D VAE 潜空间。
-  \item \textbf{结果}~~LLM 路线的 3D 物体生成与视觉 3D 理解达 SOTA；ICML 2026 一作，能力落地光子内部艺术设计平台。
+  \item \textbf{问题}~~现有 MLLM 的 3D 多停留在低分辨率网格或粗代理，理解与高分辨率生成难同框。
+  \item \textbf{方法}~~文本 / 图像 / 3D 统一到 MOT（TokenAR + BlockAR），并接入 3D VAE 潜空间。
+  \item \textbf{结果}~~LLM 路线 3D 生成与视觉理解达 SOTA；ICML 2026 一作，落地光子内部艺术设计平台。
 \end{itemize}
 
 \datedsubsection{\textbf{PBR 人脸材质}~~文本驱动贴图生成}{TPAMI 2025 · 共一（学生一作）}
 \begin{itemize}
-  \item \textbf{问题}~~野外图像到 PBR 人脸材质缺少配对监督，现有方法或难兼容 PBR 管线，或依赖 Light Stage 级采集。
-  \item \textbf{方法}~~基于 FFHQ-UV 做渐进式隐空间微调：可微渲染 + 贴图解耦训练生成器，再对齐文本空间，并以边缘感知 SDS 提升材质。
-  \item \textbf{结果}~~无配对 PBR 监督下仍可生成物理材质贴图；相对当年强基线质量提升约 20\%；TPAMI 2025 共一（学生一作）。
+  \item \textbf{问题}~~野外图到 PBR 人脸材质缺配对监督，现有方法或难兼容管线，或依赖 Light Stage。
+  \item \textbf{方法}~~FFHQ-UV 渐进隐空间微调：可微渲染 + 贴图解耦，对齐文本空间，边缘感知 SDS 增强。
+  \item \textbf{结果}~~无配对 PBR 监督下仍可生成物理材质；相对当年强基线质量约 +20\%；TPAMI 2025 共一。
 \end{itemize}
 
 \section{\faLightbulbO\ 其他方向}
-将其余项目按能力方向汇入，不单列长文：
 \begin{itemize}
   \item \textbf{扩散加速}~~DiT + 一致性模型：VAE 预编码 latent，拉直去噪轨迹，小步数采样质量优于原 DiT。
-  \item \textbf{稀疏 3D 生成}~~八叉树 + MinkowskiEngine：3D VAE 压缩高分辨率物体，稀疏卷积去噪网络（自注意力 / 窗口注意力 / GN / LN）从低分辨率噪声生成。
-  \item \textbf{身份一致生成}~~双角色分镜：在 OMG+InstantID 上增加检测、姿态控制与换装，并用 LLM 判断文本与约束冲突。
-  \item \textbf{具身巡检}~~高空智能巡检（国家级重点大创，Top 0.2\%）：无人机 + Jetson Nano / TensorRT YOLOv5，端云协同完成检测—定位—告警。
+  \item \textbf{稀疏 3D 生成}~~八叉树 + MinkowskiEngine：3D VAE 压缩高分辨率物体，稀疏卷积去噪（自注意力 / 窗口注意力 / GN / LN）。
+  \item \textbf{身份一致生成}~~双角色分镜：OMG+InstantID 上增加检测、姿态与换装，并用 LLM 判断文本与约束冲突。
+  \item \textbf{具身巡检}~~高空智能巡检（国家级重点大创，Top 0.2\%）：无人机 + Jetson Nano / TensorRT YOLOv5，端云协同检测—定位—告警。
 \end{itemize}
 
 \section{\faWrench\ 技能}
