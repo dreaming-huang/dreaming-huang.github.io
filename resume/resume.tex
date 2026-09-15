@@ -30,36 +30,86 @@ CAD\&CG 全国重点实验室 / 浦江实验室，导师：许威威教授
 \datedsubsection{\textbf{腾讯光子工作室}~~科研实习（计算机图形、3D 生成）}{2024.04 -- 至今}
 \role{项目主管}{戴强}
 \begin{itemize}
-  \item 负责扩散模型 + PCG 的结构化建筑生成方向，产出用于和平精英相关建筑资产。
-  \item 负责 3D 理解与生成统一 MLLM，相关能力在光子内部艺术设计平台落地。
+  \item 覆盖结构化建筑生成与 3D 理解/生成统一模型两条产研线，分别对接游戏资产生产与内部设计工具。
+  \item 与业务协作，将生成管线接入和平精英相关建筑资产生产，并推动统一 3D MLLM 能力进入光子内部艺术设计平台。
 \end{itemize}
 
 \datedsubsection{\textbf{快手}~~科研实习（计算机图形、数字人）}{2023.04 -- 2024.04}
 \role{项目主管}{万鹏飞、马重阳}
 \begin{itemize}
-  \item 负责文本驱动 PBR 人脸材质生成，服务数字人资产管线。
+  \item 负责文本驱动人脸材质方向，对接数字人资产管线，完成方法到材质生产链路的工程化。
   \item 相关工作申请国家发明专利一项。
 \end{itemize}
 
 \section{\faCogs\ 精选项目}
 \datedsubsection{\textbf{BuildingBlock}~~结构化建筑生成}{SIGGRAPH 2025 · 一作}
-布局预测后调用 PCG 构建：相对当年强基线，布局 FID 下降 70\%、速度提升 200\%。
-\datedsubsection{\textbf{CG-MLLM}~~3D 理解与生成统一模型}{ICML 2026 · 一作}
-文本 / 图像 / 3D 资产统一到同一 MLLM；内部艺术设计平台落地。
-\datedsubsection{\textbf{PBR 人脸材质}~~文本驱动贴图生成}{TPAMI 2025 · 共一（学生一作）}
-无配对 PBR 监督下生成人脸材质贴图；相对当年强基线质量提升约 20\%。
-
-\section{\faFileTextO\ 论文}
-\begin{itemize}[parsep=0.15ex]
-  \item \textbf{TPAMI 2025}（共一，学生一作）Physically Based Facial Texture Generation in the Wild
-  \item \textbf{SIGGRAPH 2025}（一作）BuildingBlock: A Hybrid Approach for Structured Building Generation
-  \item \textbf{ICML 2026}（一作）CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models
-  \item \textbf{WACV 2026 Oral} VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework
-  \item \textbf{arXiv, under review} HetScene: Heterogeneity-Aware Diffusion for Dense Indoor Scene Generation
+\begin{itemize}
+  \item \textbf{问题}~~游戏与互动场景需要精细、可控、可交互的结构化建筑，端到端生成难直接对接 PCG 资产管线。
+  \item \textbf{方法}~~扩散引导的两阶段混合：先预测 PCG 友好布局，再按文本生成组件细节并调用 PCG 合成；将「先布局、后物体」用于建筑生成。
+  \item \textbf{结果}~~相对当年强基线，布局 FID 下降 70\%、速度提升 200\%；SIGGRAPH 2025 一作，资产落地和平精英。
 \end{itemize}
-{\small 完整列表与项目页：\href{https://cv.jream.top/}{https://cv.jream.top/}}
+
+\datedsubsection{\textbf{CG-MLLM}~~3D 理解与生成统一模型}{ICML 2026 · 一作}
+\begin{itemize}
+  \item \textbf{问题}~~现有 LLM/MLLM 的 3D 能力多停留在低分辨率网格或粗结构代理，理解与高分辨率生成难以同框。
+  \item \textbf{方法}~~将文本、图像、3D 资产统一到按建模划分的 MOT 框架：TokenAR 处理常规 token，BlockAR 处理空间 block，并接入 3D VAE 潜空间。
+  \item \textbf{结果}~~LLM 路线的 3D 物体生成与视觉 3D 理解达 SOTA；ICML 2026 一作，能力落地光子内部艺术设计平台。
+\end{itemize}
+
+\datedsubsection{\textbf{PBR 人脸材质}~~文本驱动贴图生成}{TPAMI 2025 · 共一（学生一作）}
+\begin{itemize}
+  \item \textbf{问题}~~野外图像到 PBR 人脸材质缺少配对监督，现有方法或难兼容 PBR 管线，或依赖 Light Stage 级采集。
+  \item \textbf{方法}~~基于 FFHQ-UV 做渐进式隐空间微调：可微渲染 + 贴图解耦训练生成器，再对齐文本空间，并以边缘感知 SDS 提升材质。
+  \item \textbf{结果}~~无配对 PBR 监督下仍可生成物理材质贴图；相对当年强基线质量提升约 20\%；TPAMI 2025 共一（学生一作）。
+\end{itemize}
+
+\section{\faLightbulbO\ 其他方向}
+将其余项目按能力方向汇入，不单列长文：
+\begin{itemize}
+  \item \textbf{扩散加速}~~DiT + 一致性模型：VAE 预编码 latent，拉直去噪轨迹，小步数采样质量优于原 DiT。
+  \item \textbf{稀疏 3D 生成}~~八叉树 + MinkowskiEngine：3D VAE 压缩高分辨率物体，稀疏卷积去噪网络（自注意力 / 窗口注意力 / GN / LN）从低分辨率噪声生成。
+  \item \textbf{身份一致生成}~~双角色分镜：在 OMG+InstantID 上增加检测、姿态控制与换装，并用 LLM 判断文本与约束冲突。
+  \item \textbf{具身巡检}~~高空智能巡检（国家级重点大创，Top 0.2\%）：无人机 + Jetson Nano / TensorRT YOLOv5，端云协同完成检测—定位—告警。
+\end{itemize}
 
 \section{\faWrench\ 技能}
 扩散模型、MLLM、3D 生成（资产 / 建筑 / 数字人材质）、计算机图形、具身智能。
+
+\newpage
+\section{\faFileTextO\ 论文}
+\vspace{0.4ex}
+\begin{enumerate}[parsep=0.5ex]
+
+    \item Physically Based Facial Texture Generation In The Wild
+
+Chi Wang$^{*}$, \textbf{Junming Huang}$^{*}$, Rong Zhang$^{*}$, Qi Wang, Haotian Yang, Pengfei Wan, Haibin Huang, Chongyang Ma, Weiwei Xu\textsuperscript{\Letter}
+    \hfill\textbf{TPAMI 2025}
+
+    \item BuildingBlock: A Hybrid Approach for Structured Building Generation
+
+    \textbf{Junming Huang}$^{*}$, Chi Wang$^{*}$, Letian Li, Changxin Huang, Qiang Dai\textsuperscript{\Letter}, Weiwei Xu\textsuperscript{\Letter}
+
+    \hfill\textbf{SIGGRAPH 2025}
+
+    \item CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models
+
+    \textbf{Junming Huang}, Chi Wang, Letian Li, Guangkai Xu, Donglin Huang, Hao Chen, Qiang Dai, Weiwei Xu\textsuperscript{\Letter}
+
+    \hfill\textbf{ICML 2026}
+
+    \item VividAnimator: An End-to-End Audio and Pose-driven Half-Body Human Animation Framework
+
+    Donglin Huang$^{*}$, Yongyuan Li$^{*}$, Tianhang Liu$^{*}$, \textbf{Junming Huang}, Xiaoda Yang, Chi Wang, Weiwei Xu\textsuperscript{\Letter}
+
+    \hfill\textbf{WACV 2026 Oral}
+
+    \item HetScene: Heterogeneity-Aware Diffusion for Dense Indoor Scene Generation
+
+    Zini Chen$^{*}$, \textbf{Junming Huang}$^{*}$, Rong Zhang, Jiamin Xu, Cheng Peng, Chi Wang\textsuperscript{\Letter}, Weiwei Xu
+
+    \hfill\textbf{Arxiv(Under Review)}
+
+\end{enumerate}
+{\small 完整列表与项目页：\href{https://cv.jream.top/}{https://cv.jream.top/}}
 
 \end{document}
