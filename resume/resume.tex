@@ -17,28 +17,27 @@
 \setlist[enumerate]{topsep=0.12em, itemsep=0.35em, leftmargin=1.5pc}
 
 \name{黄俊铭}
-\centerline{\intension{3D生成 | 计算机图形 | MLLM}}
+\centerline{\intension{多模态大语言模型 | 3D空间智能}}
 \vspace{0.35ex}
 \contactInfo{junminghuang@zju.edu.cn}{(+86) 132-6788-3366}{\href{https://cv.jream.top/}{Homepage}}
 
 \section{\faGraduationCap\ 教育背景}
-\datedsubsection{\textbf{浙江大学}~~博士（硕博连读），计算机科学与技术}{2023.09 -- 2028.06（预计）}
+\datedsubsection{\textbf{浙江大学}~~博士（硕博连读）}{2023.09 -- 2028.06（预计）}
 CAD\&CG 全国重点实验室 / 浦江实验室，导师：许威威教授
-\datedsubsection{\textbf{云南大学}~~学士，软件学院}{2019.09 -- 2023.07}
-软件工程本科
+\datedsubsection{\textbf{云南大学}~~软件学院~~学士}{2019.09 -- 2023.07}
 
 \section{\faSitemap\ 实习经历}
-\datedsubsection{\textbf{腾讯光子工作室}~~科研实习（计算机图形、3D 生成）}{2024.04 -- 至今}
+\datedsubsection{\textbf{腾讯光子工作室}~~科研实习（3D 空间智能）}{2024.04 -- 至今}
 \role{项目主管}{戴强}
 \begin{itemize}
-  \item 覆盖结构化建筑生成与 3D 理解/生成统一模型两条产研线，承担方案、训练与业务对接。
-  \item 与光子业务协作，把研究原型推进到可交付的资产生产与内部工具接入。
+  \item 独立负责结构化建筑生成与 3D 理解/生成统一模型两条产研线：定方案、带训练、对接业务管线。
+  \item 把研究原型推进到可交付资产生产：BuildingBlock 接入和平精英；CG-MLLM 落地光子内部艺术设计平台。
 \end{itemize}
 
-\datedsubsection{\textbf{快手}~~科研实习（计算机图形、数字人）}{2023.04 -- 2024.04}
+\datedsubsection{\textbf{快手}~~科研实习（数字人、PBR 材质）}{2023.04 -- 2024.04}
 \role{项目主管}{万鹏飞、马重阳}
 \begin{itemize}
-  \item 负责文本驱动人脸材质方向，对接数字人资产管线，完成方法到材质生产的工程化。
+  \item 牵头文本驱动人脸 PBR 材质：方法选型、训练与数字人资产管线接入，完成可用贴图交付。
   \item 相关工作申请国家发明专利一项。
 \end{itemize}
 
@@ -46,25 +45,25 @@ CAD\&CG 全国重点实验室 / 浦江实验室，导师：许威威教授
 \datedsubsection{\textbf{BuildingBlock}~~结构化建筑生成}{SIGGRAPH 2025 · 一作}
 \begin{itemize}
   \item \textbf{问题}~~游戏建筑需精细、可控、可交互，端到端生成难对接 PCG 资产管线。
-  \item \textbf{方法}~~扩散两阶段混合：先预测 PCG 友好布局，再按文本生成组件并调用 PCG。
+  \item \textbf{方法}~~先布局后 PCG：LGP 将盒式布局当作点云，用 Transformer 扩散生成全局一致布局，LLM 补组件风格与层级规则；BCP 按布局调用 PCG 拼装可局部编辑建筑。
   \item \textbf{结果}~~相对当年强基线，布局 FID $-70\%$、速度 $+200\%$；SIGGRAPH 2025 一作，用于和平精英。
 \end{itemize}
 
 \datedsubsection{\textbf{CG-MLLM}~~3D 理解与生成统一模型}{ICML 2026 · 一作}
 \begin{itemize}
   \item \textbf{问题}~~现有 MLLM 的 3D 多停留在低分辨率网格或粗代理，理解与高分辨率生成难同框。
-  \item \textbf{方法}~~文本 / 图像 / 3D 统一到 MOT（TokenAR + BlockAR），并接入 3D VAE 潜空间。
+  \item \textbf{方法}~~Mixture-of-Transformer：TokenAR 处理文本/图像 token，BlockAR 处理空间块；接入预训练视觉语言骨干与 3D VAE 潜空间，实现长上下文交互。
   \item \textbf{结果}~~LLM 路线 3D 生成与视觉理解达 SOTA；ICML 2026 一作，落地光子内部艺术设计平台。
 \end{itemize}
 
 \datedsubsection{\textbf{PBR 人脸材质}~~文本驱动贴图生成}{TPAMI 2025 · 共一（学生一作）}
 \begin{itemize}
   \item \textbf{问题}~~野外图到 PBR 人脸材质缺配对监督，现有方法或难兼容管线，或依赖 Light Stage。
-  \item \textbf{方法}~~FFHQ-UV 渐进隐空间微调：可微渲染 + 贴图解耦，对齐文本空间，边缘感知 SDS 增强。
-  \item \textbf{结果}~~无配对 PBR 监督下仍可生成物理材质；相对当年强基线质量约 +20\%；TPAMI 2025 共一。
+  \item \textbf{方法}~~基于 FFHQ-UV 的渐进隐空间微调：可微渲染 + 贴图解耦训练 GAN 采样，对齐文本空间，再用边缘感知 SDS（EASDS）提升多样性与优化效率。
+  \item \textbf{结果}~~无配对 PBR 监督下仍可生成物理材质；相对当年强基线质量约 $+20\%$；TPAMI 2025 共一。
 \end{itemize}
 
-\section{\faLightbulbO\ 其他方向}
+\section{\faLightbulbO\ 扩展研究}
 \begin{itemize}
   \item \textbf{扩散加速}~~DiT + 一致性模型：VAE 预编码 latent，拉直去噪轨迹，小步数采样质量优于原 DiT。
   \item \textbf{稀疏 3D 生成}~~八叉树 + MinkowskiEngine：3D VAE 压缩高分辨率物体，稀疏卷积去噪（自注意力 / 窗口注意力 / GN / LN）。
@@ -73,7 +72,7 @@ CAD\&CG 全国重点实验室 / 浦江实验室，导师：许威威教授
 \end{itemize}
 
 \section{\faWrench\ 技能}
-扩散模型、MLLM、3D 生成（资产 / 建筑 / 数字人材质）、计算机图形、具身智能。
+多模态大语言模型、3D 空间智能、扩散模型、计算机图形、具身智能。
 
 \newpage
 \section{\faFileTextO\ 论文}
