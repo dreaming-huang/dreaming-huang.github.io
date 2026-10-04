@@ -16,13 +16,27 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork" style="display: flex; align-items: flex-start; gap: 20px;">
     
     {% if teaser %}
-      <div class="archive__item-teaser" style="flex: 0 0 200px;"> <img src=
+      {% assign teaser_ext = teaser | split: "." | last | downcase %}
+      <div class="archive__item-teaser" style="flex: 0 0 200px;">
+        {% if teaser_ext == "mp4" %}
+          <video controls autoplay muted loop playsinline preload="metadata" style="width: 100%; height: auto; display: block; border-radius: 4px;">
+            <source src=
+              {% if teaser contains "://" %}
+                "{{ teaser }}"
+              {% else %}
+                "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+              {% endif %}
+              type="video/mp4">
+          </video>
+        {% else %}
+          <img src=
           {% if teaser contains "://" %}
             "{{ teaser }}"
           {% else %}
             "{{ teaser | prepend: "/images/" | prepend: base_path }}"
           {% endif %}
           alt="" style="width: 100%; border-radius: 4px;">
+        {% endif %}
       </div>
     {% endif %}
 
