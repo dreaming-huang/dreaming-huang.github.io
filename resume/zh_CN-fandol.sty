@@ -1,0 +1,43 @@
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{zh_CN-fandol}[2026/09/14 Fandol CJK fonts via xeCJK (TeX Live)]
+
+% Default Chinese support: TeX Live Fandol (Song/Hei/Kai/Fang).
+% No Path= to local files; fonts are resolved from the TeX tree.
+% Equivalent to ctex fontset=fandol on XeLaTeX.
+\RequirePackage{fontspec}
+\RequirePackage{xeCJK}
+
+\setCJKmainfont{FandolSong-Regular}[
+  Extension  = .otf,
+  BoldFont   = FandolSong-Bold,
+  ItalicFont = FandolKai-Regular
+]
+\setCJKsansfont{FandolHei-Regular}[
+  Extension = .otf,
+  BoldFont  = FandolHei-Bold
+]
+\setCJKmonofont{FandolFang-Regular}[
+  Extension = .otf
+]
+
+\setCJKfamilyfont{zhsong}{FandolSong-Regular}[
+  Extension = .otf,
+  BoldFont  = FandolSong-Bold
+]
+\setCJKfamilyfont{zhhei}{FandolHei-Regular}[
+  Extension = .otf,
+  BoldFont  = FandolHei-Bold
+]
+\setCJKfamilyfont{zhfs}{FandolFang-Regular}[
+  Extension = .otf
+]
+\setCJKfamilyfont{zhkai}{FandolKai-Regular}[
+  Extension = .otf
+]
+
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+\newcommand*{\heiti}{\CJKfamily{zhhei}} % 黑体
+\newcommand*{\kaishu}{\CJKfamily{zhkai}} % 楷书
+\newcommand*{\fangsong}{\CJKfamily{zhfs}} % 仿宋
+
+\endinput

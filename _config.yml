@@ -202,6 +202,7 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - resume
   - tmp
   - vendor
 keep_files:

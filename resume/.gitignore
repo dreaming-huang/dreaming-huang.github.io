@@ -1,0 +1,24 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+*.synctex.gz(busy)
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.dvi
+*.ps
+*~
+
+# Compiled PDFs are generated locally; this folder is source-first
+*.pdf
+
+.DS_Store
