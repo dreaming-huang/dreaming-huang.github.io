@@ -11,7 +11,7 @@ A list of all the posts and pages found on the site. For you robots out there, t
 
 Project pages included in the XML sitemap:
 - [BuildingBlock]({{ base_path }}/BuildingBlock-page/)
-- [CG-MLLM](https://cv.jream.top/CG-MLLM-page/) (separate GitHub Pages project site; listed as an extra sitemap URL)
+- [CG-MLLM](https://dreaming-huang.github.io/CG-MLLM-page/) (separate project site)
 
 <h2>Pages</h2>
 {% for post in site.pages %}

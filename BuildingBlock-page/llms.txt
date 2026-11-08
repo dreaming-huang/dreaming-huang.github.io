@@ -6,6 +6,7 @@ BuildingBlock is a SIGGRAPH 2025 hybrid method for text-to-building and structur
 - Venue: ACM SIGGRAPH 2025 (SIGGRAPH Conference Papers '25)
 - arXiv: 2505.04051 — https://arxiv.org/abs/2505.04051
 - DOI: 10.1145/3721238.3730705 — https://doi.org/10.1145/3721238.3730705
-- Project: https://buildingblock.jream.top/ (https://cv.jream.top/BuildingBlock-page/, https://dreaming-huang.github.io/BuildingBlock-page/)
+- Project: https://dreaming-huang.github.io/BuildingBlock-page/
+- Optional aliases, not canonical: https://cv.jream.top/BuildingBlock-page/ , https://buildingblock.jream.top/
 - Code: https://github.com/Tencent/BuildingBlock
 - Dataset: https://huggingface.co/datasets/dreaming-huang/buildingblock
