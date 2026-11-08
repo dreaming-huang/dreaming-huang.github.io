@@ -341,7 +341,7 @@ plugins:
 
 # Mimic GitHub Pages with --safe
 # jekyll-sitemap is omitted so _pages/sitemap.xml can include extra project URLs
-# (CG-MLLM-page) that are not folders in this repo.
+# (buildingblock.jream.top and cg-mllm.jream.top) that are not personal-site paths.
 whitelist:
   - jekyll-feed
   - jekyll-gist

@@ -1,6 +1,10 @@
-# Extra sitemap URLs that are not generated from this repo.
-# CG-MLLM-page is a separate GitHub Pages project site, routed on cv.jream.top.
+# Canonical project homepages. These hosts are outside the personal-site paths.
+# /BuildingBlock-page/ remains an alias and is still emitted from the static file.
+# CG-MLLM is a separate project site; do not list the cv.jream.top path.
 urls:
-  - loc: "https://cv.jream.top/CG-MLLM-page/"
+  - loc: "https://buildingblock.jream.top/"
+    changefreq: monthly
+    priority: 0.8
+  - loc: "https://cg-mllm.jream.top/"
     changefreq: monthly
     priority: 0.8
