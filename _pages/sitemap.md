@@ -10,8 +10,8 @@ author_profile: true
 A list of all the posts and pages found on the site. For you robots out there, there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
 
 Project pages included in the XML sitemap:
-- [BuildingBlock](https://buildingblock.jream.top/) (`/BuildingBlock-page/` on this site remains an alias)
-- [CG-MLLM](https://cg-mllm.jream.top/)
+- [BuildingBlock]({{ base_path }}/BuildingBlock-page/)
+- [CG-MLLM](https://dreaming-huang.github.io/CG-MLLM-page/) (separate project site)
 
 <h2>Pages</h2>
 {% for post in site.pages %}

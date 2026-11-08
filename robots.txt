@@ -1,7 +1,8 @@
-# Repo-owned robots.txt. Cloudflare may still inject AI-scraper Disallows
-# on cv.jream.top; this file does not add those blocks and does not Disallow
-# Googlebot, pages, or PDFs.
+# Repo-owned robots.txt for the native GitHub Pages site.
+# Cloudflare may still inject AI-scraper Disallows on the optional cv.jream.top
+# mirror. This file does not add those blocks and does not Disallow Googlebot,
+# pages, or PDFs.
 User-agent: *
 Allow: /
 
-Sitemap: https://cv.jream.top/sitemap.xml
+Sitemap: https://dreaming-huang.github.io/sitemap.xml

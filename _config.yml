@@ -24,10 +24,8 @@ title                   : "Home"
 title_separator         : "-"
 name                    : &name "Junming Huang"
 description             : &description "Personal academic website of Junming Huang, a Master's student at Zhejiang University specializing in Computer Graphics and AI."
-# url                     : "https://dreaming-huang.github.io" # Correct: Your site's main URL.
-url                     : "https://cv.jream.top" # Correct: Your site's main URL.
-
-baseurl                 : "" # Correct: Should be empty for a user page like username.github.io
+url                     : "https://dreaming-huang.github.io" # Native GitHub Pages user site. Custom domains are optional aliases, not the canonical host.
+baseurl                 : "" # Must stay empty so root assets and canonicals resolve on dreaming-huang.github.io.
 repository              : "dreaming-huang/dreaming-huang.github.io" # Correct: The repository for your site
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -164,6 +162,7 @@ social:
     - "https://www.semanticscholar.org/author/2359585141"
     - "https://dblp.dagstuhl.de/pid/32/8393-2.html"
     - "https://huggingface.co/JreamH"
+    - "https://cv.jream.top/" # Optional mirror of this site. Not a redirect target.
 
 
 # Analytics
@@ -340,8 +339,8 @@ plugins:
   - jemoji
 
 # Mimic GitHub Pages with --safe
-# jekyll-sitemap is omitted so _pages/sitemap.xml can include extra project URLs
-# (buildingblock.jream.top and cg-mllm.jream.top) that are not personal-site paths.
+# jekyll-sitemap is omitted so _pages/sitemap.xml can include the native
+# CG-MLLM Pages URL, which is published from a separate repository.
 whitelist:
   - jekyll-feed
   - jekyll-gist
